@@ -1,1 +1,32 @@
-header.header header
+header.header
+	.header-top
+		nav.top-menu
+			ul.top-menu__list
+				li.top-menu__item
+					a(href="/about_us/shipping").top-menu__link Доставка
+				li.top-menu__item
+					a(href="#").top-menu__link Для клиентов
+
+					ul.top-menu__sub
+						li.top-menu__item
+							a(href="/about_us/17963/").top-menu__link Программа скидок
+						li.top-menu__item
+							a(href="/about_us/19365/").top-menu__link Способы оплаты
+						li.top-menu__item
+							a(href="/about_us/20889/").top-menu__link Ваши отзывы
+
+				li.top-menu__item
+					a(href="/about_us").top-menu__link О нас
+				li.top-menu__item
+					a(href="/about_us/19363").top-menu__link Контакты
+
+		a(href="/cabinet").header-top__profile Ваш кабинет
+
+		a(href="/showcart").header-basket
+			span.header-basket__icon
+				+svg('ic-cart','ic-cart ic-stroke', '23', '21')
+			span.header-basket__label Корзина:
+			| 
+			span.header-basket__text 0 товаров на
+			| 
+			span.header-basket__sum 0 ₽

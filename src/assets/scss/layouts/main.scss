@@ -17,7 +17,11 @@ body{
 
 img{max-width: 100%;}
 
-a{color: $color-orange;}
+a{
+	color: $color-orange;
+	text-decoration: underline;
+}
+
 a:hover{text-decoration: none;}
 
 p{padding: 0 0 17px;}
