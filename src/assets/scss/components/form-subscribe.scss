@@ -1,0 +1,61 @@
+/*-------------- form-subscribe -----------------*/
+.form-subscribe{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 20px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+
+	&__head{
+		@include font(normal, 500, rem(13.5px), 1.2, $color-orange);
+		text-transform: uppercase;
+		margin-right: 20px;
+		margin-top: 2px;
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+	}
+
+	&__field{
+		display: inline-flex;
+		align-items: center;
+		margin-right: 10px;
+	}
+
+	&__label{
+		@include font(normal, 500, rem(12px), 1.2, $color-orange);
+		text-transform: uppercase;
+		margin-right: 3px;
+		margin-top: 2px;
+	}
+
+	input[type="text"]{
+		display: inline-block;
+		height: rem(21px);
+		width: 140px;
+		@include font(normal, normal, rem(13px), rem(19px), #111);
+		padding: 0 2px;
+		margin: 0;
+		border: solid 1px #ddd;
+		outline: 0;
+		background: #fff;
+		transition: all 0.2s ease 0s;
+	}
+
+	input[type="text"]::placeholder{color: #929292;}
+	input[type="text"]::-webkit-input-placeholder {color: #929292;}
+	input[type="text"]:-moz-placeholder {color: #929292;}
+
+	input[type="text"]:focus{border-color: $color-orange;}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: rem(21px);
+		min-width: 165px;
+		line-height: rem(21px);
+	}
+}

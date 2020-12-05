@@ -1,0 +1,63 @@
+/*-------------- form-product -----------------*/
+.form-product{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+
+	&__head{
+		display: inline-flex;
+		align-items: center;
+		margin-right: 15px;
+	}
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 33px;
+		height: 33px;
+		background: #8a8b85;
+		margin-right: 7px;
+
+		.icon{
+			fill: #fff;
+			transform: scale(-1, 1);
+		}
+	}
+
+	&__title{
+		@include font(normal, normal, rem(14px), 1.2, $color-text);
+		text-transform: uppercase;
+	}
+
+	&__content{display: inline-flex;}
+
+	input[type="text"]{
+		display: inline-block;
+		height: rem(21px);
+		width: 335px;
+		@include font(normal, normal, rem(13px), rem(19px), #111);
+		padding: 0 5px;
+		margin: 0;
+		border: solid 1px #ddd;
+		outline: 0;
+		background: #fff;
+		transition: all 0.2s ease 0s;
+	}
+
+	input[type="text"]::placeholder{color: #929292; text-align: center;}
+	input[type="text"]::-webkit-input-placeholder {color: #929292; text-align: center;}
+	input[type="text"]:-moz-placeholder {color: #929292; text-align: center;}
+
+	input[type="text"]:focus{border-color: $color-orange;}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: rem(21px);
+		line-height: rem(21px);
+	}
+}

@@ -1,1 +1,112 @@
-footer.footer footer
+footer.footer
+	form.form-subscribe
+		.form-subscribe__head Полезная рассылка AYURVEDAMARKET
+		.form-subscribe__content
+			.form-subscribe__field
+				.form-subscribe__label Ваше имя
+				.form-subscribe__input
+					input(type="text", name='name')
+
+			.form-subscribe__field
+				.form-subscribe__label Email
+				.form-subscribe__input
+					input(type="text", name='email')
+
+			button.btn(type='submit') Подписаться
+
+	.footer-main
+		.footer-main__item
+			.footer-main__title Популярное
+
+			ul.footer-menu
+				-
+					var list=[
+						{link:"/ozdorovitelnye_sredstva/", text:'Средства для здоровья'},
+						{link:'/indijskie-specii-ayurveda-kupit/', text:'Специи и пряности'},
+						{link:'/indijskaya-ayurvedicheskaya-kosmetika-kupit/', text:'Уход за кожей'},
+						{link:'/food/', text:'Био-продукты'},
+					]
+
+				each item in list
+					li.footer-menu__item
+						a(href=item.link).footer-menu__link= item.text
+
+		.footer-main__item
+			.footer-main__title Для клиентов
+
+			ul.footer-menu
+				-
+					var list=[
+						{link:"/about_us/19365", text:'Оплата'},
+						{link:"/cabinet/", text:'Личный кабинет'},
+						{link:"false", text:'Консультации'},
+						{link:"/club/", text:'Клуб'},
+					]
+
+				each item in list
+					li.footer-menu__item
+						if(item.link=='false')
+							=item.text
+						else
+							a(href=item.link).footer-menu__link= item.text
+
+		.footer-main__item
+			.footer-main__title Сервис 
+
+			.footer-main__phone
+				a(href="tel:+74951201054") +7 (495) 120-10-54
+
+			ul.footer-menu
+				-
+					var list=[
+						{link:"/about_us/17963/", text:'Программа скидок'},
+						{link:"/about_us/19363", text:'Контакты'},
+					]
+
+				each item in list
+					li.footer-menu__item
+						a(href=item.link).footer-menu__link= item.text
+
+		.footer-main__item
+			.footer-main__title Ayurvedamarket
+
+			ul.footer-menu
+				-
+					var list=[
+						{link:"/about_us/20889", text:'Ваши отзывы'},
+						{link:"false", text:'Новости'},
+						{link:"/about_us/", text:'О нас'},
+						{link:"https://vk.com/all_ayurveda", text:'VK'},
+					]
+
+				each item in list
+					li.footer-menu__item
+						if(item.link=='false')
+							=item.text
+						else
+							a(href=item.link).footer-menu__link= item.text
+
+	form.form-product
+		.form-product__head
+			.form-product__icon
+				+svg('ic-search','ic-search', '16', '16')
+
+			.form-product__title Если вы не увидели, что искали, попробуйте спросить здесь
+
+		.form-product__content
+			input(type="text", placeholder="Более 1500 аюрведических товаров")
+
+			button.btn(type='submit') Поиск
+
+	.footer-bottom
+		.footer-bottom__polit
+			a(href="/about_us/policy") Политика конфиденциальности
+
+		.footer-counter
+			.footer-counter__item
+				a(href="#")
+					img(src="https://hit41.hotlog.ru/cgi-bin/hotlog/count?0.028326815547287554&s=2260967&im=68&r=https%3A//ayurvedamarket.ru/knigi&pg=https%3A//ayurvedamarket.ru/about_us/19363&j=N&wh=1920x1080&px=24&cver=1&js=1.3", alt="")
+
+			.footer-counter__item
+				a(href="#")
+					img(src="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=1248/*https://img.yandex.ru/market/informer3.png", alt="")

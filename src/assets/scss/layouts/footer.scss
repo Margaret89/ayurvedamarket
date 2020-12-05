@@ -1,0 +1,75 @@
+.footer-main{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 45px 30px 40px;
+
+	&__item{
+		width: 25%;
+		padding: 0 10px;
+	}
+
+	&__title{
+		@include font(normal, 500, rem(27px), 1.2, #3d3d3d);
+		margin-bottom: 20px;
+	}
+
+	&__phone,
+	&__phone a{
+		@include font(normal, 300, rem(22px), 1.2, #3d3d3d);
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__phone{margin-bottom: 5px;}
+	&__phone a:hover{color: $color-orange;}
+}
+
+.footer-menu{
+	@include reset-list;
+
+	&__item,
+	&__link{
+		@include font(normal, 500, rem(18px), 1.2, #9a9a9a);
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item{
+		@include reset-list;
+		padding: 5px 0;
+	}
+
+	&__link:hover{
+		color: #3d3d3d;
+		text-decoration: underline;
+	}
+
+	&__item.active &__link{color: #3d3d3d;}
+	&__item.active{background: rgb(182, 163, 139);}
+}
+
+.footer-bottom{
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 20px;
+	position: relative;
+
+	&__polit{
+		@include font(normal, normal, rem(14px), 1.2, #aaa);
+		text-align: center;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+
+		a{color: #aaa;}
+	}
+}
+
+.footer-counter{
+	display: inline-flex;
+	align-items: center;
+
+	&__item:not(:last-child){margin-right: 20px;}
+}

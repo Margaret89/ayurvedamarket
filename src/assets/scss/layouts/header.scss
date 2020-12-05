@@ -68,7 +68,7 @@
 	}
 
 	&__link:hover,
-	&__link.active{
+	&__item.active &__link{
 		background: #e9e9e9;
 	}
 

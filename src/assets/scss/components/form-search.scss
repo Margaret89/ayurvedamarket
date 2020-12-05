@@ -20,9 +20,9 @@
 		transition: all 0.2s ease 0s;
 	}
 
-	// input[type="text"]::placeholder{font-weight: 300; color: $color-grey; opacity: 1;}
-	// input[type="text"]::-webkit-input-placeholder {font-weight: 300; color: $color-grey; opacity: 1;}
-	// input[type="text"]:-moz-placeholder {font-weight: 300; color: $color-grey; opacity: 1;}
+	input[type="text"]::placeholder{color: #929292;}
+	input[type="text"]::-webkit-input-placeholder {color: #929292;}
+	input[type="text"]:-moz-placeholder {color: #929292;}
 
 	input[type="text"]:focus{border-color: $color-orange;}
 
