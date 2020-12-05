@@ -1,0 +1,32 @@
+/*-------------- reasons -----------------*/
+.reasons{
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 45px 0;
+
+	&__main{width: 44%;}
+	&__content{width: calc(52% - 20px);}
+
+	&__img{
+		padding-bottom: 40px;
+		border-bottom: 1px solid $color-green;
+		margin-bottom: 38px;
+	}
+
+	&__head{
+		@include font(normal, 300, rem(29px), 1.35, #565656);
+		text-transform: uppercase;
+	}
+
+	&__item:not(:last-child){margin-bottom: 20px;}
+
+	&__title{
+		@include font(normal, 300, rem(30px), 1.2, #565656);
+		margin-bottom: 5px;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(16px), 1.2, #565656);
+		margin-top: -7px;
+	}
+}
