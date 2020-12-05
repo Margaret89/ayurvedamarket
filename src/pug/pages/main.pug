@@ -1,0 +1,37 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Содержание';
+	- 
+		var pagelist = [
+			{href: 'main.html',name:'Главная'},
+			{href: 'tipografika.html',name:'Типографика'},
+		];
+
+block content
+	section.top-slider-wrap
+		.top-action
+			.top-action__item
+				a(href="/club/", style="background-image: url(/assets/img/banner-club.jpg)").top-action__link
+					span.top-action__count Нас 111 335
+
+			.top-action__item
+				a(href="https://ayurvedamarket.ru/spicy-guide", style="background-image: url(/assets/img/6227329.jpg)").top-action__link
+
+		.top-slider.js-top-slider
+			-
+				var list=[
+					{img:'/assets/img/top-slide1.jpg', link:'https://ayurvedamarket.ru/presents'},
+					{img:'/assets/img/top-slide2.jpg', link:'https://ayurvedamarket.ru/novinki'},
+					{img:'/assets/img/top-slide3.jpg', link:'https://ayurvedamarket.ru/Shri_Ganga'},
+					{img:'/assets/img/top-slide4.jpg', link:'https://ayurvedamarket.ru/novinki/chavanprash-otzyvy/'},
+					{img:'/assets/img/top-slide5.jpg', link:'https://ayurvedamarket.ru/honey_and_tea'},
+					{img:'/assets/img/top-slide6.jpg', link:'https://ayurvedamarket.ru/zenslim'},
+					{img:'/assets/img/top-slide7.jpg', link:'https://ayurvedamarket.ru/Holy_Om'},
+					{img:'/assets/img/top-slide8.jpg', link:'https://ayurvedamarket.ru/knigi-po-ayurvede-ayurvedicheskaya-literatura-kupi'},
+				]
+
+			each item in list
+				.top-slider__item
+					a(href=item.link, style='background-image: url('+item.img+')').top-slider__link
+

@@ -9,11 +9,12 @@ block variables
 		];
 
 block content
-	section
-		h1 содержание
-		ul
-			each page in pagelist
-				li
-					a(href=page.href,)= page.name
+	.page-wrap
+		section
+			h1 содержание
+			ul
+				each page in pagelist
+					li
+						a(href=page.href, target='_blank')= page.name
 
 

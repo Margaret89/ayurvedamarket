@@ -1,3 +1,16 @@
+.header{position: relative;}
+
+.header-sticker{
+	&__left,
+	&__right{
+		position: absolute;
+		top: 0;
+	}
+
+	&__left{left: -150px;}
+	&__right{right: -150px;}
+}
+
 .header-top{
 	display: flex;
 	justify-content: space-between;
