@@ -191,8 +191,17 @@
 	}
 }
 
-.header-bottom{
+.header-nav{
 	background: #f5f5f5;
+
+	&__bottom{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.main-menu{flex-grow: 1;}
+		.form-search{margin: 0 21px;}
+	}
 }
 
 .main-menu{
@@ -221,6 +230,7 @@
 		@include font(normal, normal, rem(16px), 1.2, #565656);
 		text-decoration: none;
 		text-transform: uppercase;
+		padding: 0 10px;
 		transition: all 0.2s ease 0s;
 	}
 
@@ -245,6 +255,8 @@
 		left: auto;
 		right: 0;
 	}
+
+	&_orange &__link{color: #d0844f;}
 }
 
 .main-menu-sub{
