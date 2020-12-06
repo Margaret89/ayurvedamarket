@@ -204,7 +204,10 @@ block content
 											img(src="/assets/img/sticker-new-compl.png", alt="")
 
 								if(item.sale)
-									span.catalog-list__sale(class=item.spec?'catalog-list__sale_light-blue':'')= item.sale
+									span.catalog-list__sale= item.sale
+
+								if(item.spec)
+									span.catalog-list__sale.catalog-list__sale_light-blue= item.spec
 
 							.catalog-list__text
 								a(href=item.link)= item.text

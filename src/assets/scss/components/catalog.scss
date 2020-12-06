@@ -160,14 +160,16 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 108px;
-		height: 104px;
+		width: 70px;
+		height: 68px;
 		background: url(/assets/img/bg-sale.png) no-repeat -5px -5px;
-		@include font(normal, normal, rem(20px), 1.2, #fff);
+		@include font(normal, bold, rem(20px), 1.2, #fff);
 		position: absolute;
 		bottom: 0;
-		right: 0;
+		right: -15px;
 	}
+
+	&__sale_light-blue{background-position: -5px -82px;}
 
 	&__text{
 		font-family: Arial;
