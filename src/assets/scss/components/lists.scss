@@ -1,0 +1,22 @@
+/*-------------- lists -----------------*/
+.list-circle{
+	@include reset-list;
+
+	li{
+		@include reset-list;
+		position: relative;
+		margin-bottom: 25px;
+	}
+
+	li::before{
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #ffd700;
+		margin-right: 10px;
+		margin-top: -2px;
+	}
+}

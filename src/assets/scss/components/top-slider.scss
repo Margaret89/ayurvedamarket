@@ -31,6 +31,9 @@
 
 .top-slider{
 	width: 66.66%;
+	display: none;
+
+	&.slick-initialized{display: block;}
 
 	&__item{height: 402px;}
 

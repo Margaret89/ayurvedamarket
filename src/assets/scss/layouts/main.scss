@@ -24,7 +24,10 @@ a{
 
 a:hover{text-decoration: none;}
 
-p{padding: 0 0 17px;}
+p{
+	padding: 0;
+	margin: 0 0 17px 0;
+}
 
 h1,.h1,
 h2,.h2,
@@ -108,12 +111,16 @@ button.btn:hover{
 input[type="submit"].btn_green,
 button.btn_green{
 	background: $color-green;
+	font-family: $font-helvetica;
+	color: #3f3d1d;
+	font-weight: 300;
 }
 
 .btn_green:hover,
 input[type="submit"].btn_green:hover,
 button.btn_green:hover{
 	background: $color-dark-green;
+	color: #3f3d1d;
 }
 
 .code{

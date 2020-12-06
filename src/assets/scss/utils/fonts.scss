@@ -1,3 +1,4 @@
+/* Lato */
 @font-face {
 	font-family: 'Lato';
 	src: url('#{$path-fonts}/Lato/Lato-Regular.eot');
@@ -128,4 +129,50 @@
 		url('#{$path-fonts}/Lato/Lato-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
+}
+
+/* HelveticaNeueCyr */
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src:  url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Light.eot');
+	src: local('HelveticaNeueCyr-Light'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Light.woff') format('woff'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src:  url('#{$path-fonts}/helvetica/HelveticaNeueCyr-LightItalic.eot');
+	src: local('HelveticaNeueCyr-LightItalic'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-LightItalic.eot?#iefix') format('embedded-opentype'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-LightItalic.woff') format('woff'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src:  url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Bold.eot');
+	src: local('HelveticaNeueCyr-Bold'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Bold.woff') format('woff'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src:  url('#{$path-fonts}/helvetica/HelveticaNeueCyr-BoldItalic.eot');
+	src: local('HelveticaNeueCyr-BoldItalic'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-BoldItalic.woff') format('woff'),
+		 url('#{$path-fonts}/helvetica/HelveticaNeueCyr-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
 }

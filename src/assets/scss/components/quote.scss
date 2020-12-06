@@ -1,0 +1,25 @@
+/*-------------- quote -----------------*/
+.quote{
+	padding: 14px 0 10px;
+	position: relative;
+	font-family: $font-site;
+	@include font(normal, 500, rem(20px), 1.2, #3f3d1d);
+	text-align: center;
+	margin: 10px 0;
+
+	&::before,
+	&::after{
+		content: '';
+		display: inline-block;
+		width: 50%;
+		height: 1px;
+		background: #c2c2c2;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&::before{top: 0;}
+	&::after{bottom: 0;}
+}
