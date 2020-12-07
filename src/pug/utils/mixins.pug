@@ -17,7 +17,7 @@ mixin breadcrumbs(links)
 							a(href=links[i].href).breadcrumb__link=links[i].name
 						- i++
 					li.breadcrumb__item
-						span=links[i].name
+						a(href=links[i].href).breadcrumb__link=links[i].name
 
 mixin svg(icon, name_class, width,height)
 	svg.icon(class=name_class?name_class:'', width=width?width:'', height=height?height:'')

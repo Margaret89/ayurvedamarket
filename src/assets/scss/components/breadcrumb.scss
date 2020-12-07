@@ -1,0 +1,25 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb{
+	display: flex;
+	flex-wrap: wrap;
+	
+	&,
+	&__item{
+		@include reset-list;
+	}
+	
+	&{padding: 10px 30px;}
+
+	&__item{
+		font-family: Arial;
+		@include font(normal, normal, rem(12px), 1.2, $color-blue);
+		position: relative;
+	}
+
+	&__item:not(:last-child)::after{
+		content: '\2014';
+		margin: 0 5px;
+	}
+	
+	&__link{color: $color-blue;}
+}

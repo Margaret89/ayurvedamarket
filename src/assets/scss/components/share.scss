@@ -1,0 +1,33 @@
+/*-------------- share -----------------*/
+.share{
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 2px;
+		background-color: #48729e;
+		background-image: url(/assets/img/share.png);
+		background-repeat: no-repeat;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item_vk{background-color: #48729e; background-position: 0 -58px;}
+	&__item_fb{background-color: #3c5a98; background-position: 0 0;}
+	&__item_tw{background-color: #00aced; background-position: 0 -87px;}
+	&__item_ok{background-color: #ff9f4d; background-position: 0 -116px;}
+	&__item_mail{background-color: #226eb7; background-position: 0 -29px;}
+
+	&__item_vk:hover{background-color: #3a5b7e;}
+	&__item_fb:hover{background-color: #30487a;}
+	&__item_tw:hover{background-color: #008abe;}
+	&__item_ok:hover{background-color: #cc7f3e;}
+	&__item_mail:hover{background-color: #1b5892;}
+
+	&__item:not(:last-child){margin-right: 5px;}
+}

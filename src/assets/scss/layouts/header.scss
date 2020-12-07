@@ -3,12 +3,12 @@
 .header-sticker{
 	&__left,
 	&__right{
-		position: absolute;
+		position: fixed;
 		top: 0;
 	}
 
-	&__left{left: -150px;}
-	&__right{right: -150px;}
+	&__left{left: calc(50% - 650px);}
+	&__right{right: calc(50% - 650px);}
 }
 
 .header-top{

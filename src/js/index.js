@@ -52,3 +52,15 @@ if($('.js-cat-desc-switch').length){
 		$('.js-cat-desc-detail').slideToggle(300);
 	});
 }
+
+// Свернуть/развернуть отзывы
+if($('.js-review-list').length){
+	$('.js-review-list-switch').on('click', function(){
+		var $parent = $(this).parents('.js-review-list');
+		var tempVal = $(this).text();
+
+		$(this).text($(this).attr('data-text'));
+		$(this).attr('data-text', tempVal);
+		$parent.find('.js-review-full').slideToggle(300);
+	});
+}

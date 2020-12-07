@@ -123,6 +123,38 @@ button.btn_green:hover{
 	color: #3f3d1d;
 }
 
+.btn_grey,
+input[type="submit"].btn_grey,
+button.btn_grey{
+	background: #939598;
+	font-family: $font-helvetica;
+	color: #231F20;
+	font-weight: 300;
+}
+
+.btn_grey:hover,
+input[type="submit"].btn_grey:hover,
+button.btn_grey:hover{
+	background: #797b7e;
+	color: #231F20;
+}
+
+.btn_yellow,
+input[type="submit"].btn_yellow,
+button.btn_yellow{
+	background: #f5eb16;
+	font-family: $font-helvetica;
+	color: #231F20;
+	font-weight: 300;
+}
+
+.btn_yellow:hover,
+input[type="submit"].btn_yellow:hover,
+button.btn_yellow:hover{
+	background: #d8ce14;
+	color: #231F20;
+}
+
 .code{
 	background-color: #f7f7f7;
 	border: 1px solid #e1e1e8;

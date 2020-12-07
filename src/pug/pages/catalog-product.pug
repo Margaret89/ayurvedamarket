@@ -1,0 +1,344 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Список товаров';
+
+block content
+	section.catalog
+		.catalog__left
+			.catalog-menu
+				.catalog-menu__title Разделы
+
+				ul.catalog-menu__list
+					-
+						var list=[
+							{link:'/honey_and_tea/', text:'Русский мёд & Индийский чай', new:'true'},
+							{link:'/indijskie-specii-ayurveda-kupit/', text:'Специи'},
+							{link:'/spices_100/', text:'Специи и масалы до 100₽'},
+							{link:'/nuts/', text:'Ягоды, орехи и сухофрукты'},
+							{link:'/ecofood/', text:'Суперфуды & экопродукты'},
+							{link:'/cereals/', text:'Крупы'},
+							{link:'/bean/', text:'Бобовые'},
+							{link:'/basmati/', text:'Рис басмати'},
+							{link:'/muka_makarony/', text:'Мука и макаронные изделия'},
+							{link:'/sauce/', text:'Соусы, пасты и консервированные продукты'},
+							{link:'/masla/', text:'Масла'},
+							{link:'/tea/', text:'Чай, кофе и другие напитки'},
+							{link:'/med_sahar/', text:'Мёд, сахар, заменители сахара'},
+							{link:'/sweets/', text:'Cладости'},
+							{link:'/snack/', text:'Полезные перекусы'},
+							{link:'/good_fast_food/', text:'Готовые блюда &amp; блюда быстрого приготовления'},
+							{link:'/maslo_ghi/', text:'Масло "Гхи"'},
+							{link:'/veg_kolbas_syr/', text:'Вегетарианские колбасы, сыры, паштеты'},
+						]
+					each item in list
+						li.catalog-menu__item
+							a(href=item.list).catalog-menu__link= item.text
+								if(item.new)
+									sup.catalog-menu__new new!
+
+				.catalog-menu__title Бренды
+
+				ul.catalog-menu__list
+					-
+						var list=[
+							{link:'/aroy_d/', text:'Aroy-D'},
+							{link:'/Bharat_Bazar/', text:'Bharat Bazar'},
+							{link:'/Bestofindia/', text:'Bestofindia'},
+							{link:'/Holy_Om/', text:'Holy Om', new:'true'},
+							{link:'/Good_Sign_Company/', text:'Good Sign Company'},
+							{link:'/Daawat/', text:'Daawat'},
+							{link:'/Oriental_Bazaar/', text:'Oriental Bazaar'},
+							{link:'/United_Spices/', text:'United Spices'},
+							{link:'/Royal_Forest/', text:'Royal Forest'},
+							{link:'/action_life/', text:'Активная жизнь'},
+							{link:'/belovodye/', text:'Беловодье', new:'true'},
+							{link:'/vego/', text:'Вего (Vego)'},
+							{link:'/vsem_na_polzu/', text:'Всем на пользу (Здравое зерно)'},
+							{link:'/gagarinskie/', text:'Гагаринские мануфактуры'},
+							{link:'/zdoroveda/', text:'Здороведа'},
+							{link:'/zoloto_indii/', text:'Золото Индии (Амрита)'},
+							{link:'/medolubov/', text:'Медолюбов'},
+							{link:'/XXII/', text:'Продукты XXII века'},
+							{link:'/oil_king/', text:'Масляный король', new:'true'},
+							{link:'/radograd/', text:'РадоГрад', new:'true'},
+							{link:'/obraz_zhizni/', text:'Образ жизни'},
+							{link:'/soma/', text:'Сома'},
+							{link:'/saharaja/', text:'Сахараджа'},
+							{link:'/umnaya_mama/', text:'Умная мама'},
+						]
+					each item in list
+						li.catalog-menu__item
+							a(href=item.list).catalog-menu__link= item.text
+								if(item.new)
+									sup.catalog-menu__new new!
+
+		.catalog__content
+			-
+				var breadcrumbs=[
+					{href:'/',name:'Главная'},
+					{href:'#',name:'Питание'},
+					{href:'#',name:'Полезные перекусы'},
+				];
+
+			+breadcrumbs(breadcrumbs)
+
+			.product
+				.product-main
+					.product-main__photo
+						a(href='/assets/img/product.jpg' data-fancybox='product')
+							img(src="/assets/img/product.jpg", alt="")
+
+						.product-main__sticker
+							img(src="/assets/img/sticker-sale.png", alt="")
+
+						.product-main__sale -50%
+						<!--.product-main__sale.product-main__sale_light-blue -15%-->
+
+
+					.product-main__content
+						.product-main__info
+							h1 Джем "Шатаваригулам" (Satavarigulam) 200 г, Aishwarya
+							.product-main__desc Аюрведический препарат, применяемый при гинекологических заболеваниях и гормональных дисбалансах, также улучшает пищеварение и укрепляет иммунитет.
+
+						.product-main__bottom
+							.product-param
+								.product-param__title Производитель
+								.product-param__title Страна
+								.product-param__title Объем
+
+								.product-param__item
+									a(href="/search?q=Arya+Vaidya+Vilasini+Vaidya+Sala") Arya Vaidya Vilasini Vaidya Sala
+								.product-param__item Индия
+								.product-param__item 200 г
+
+							.share
+								a(href="#", rel='nofollow').share__item.share__item_vk
+								a(href="#", rel='nofollow').share__item.share__item_fb
+								a(href="#", rel='nofollow').share__item.share__item_tw
+								a(href="#", rel='nofollow').share__item.share__item_ok
+								a(href="#", rel='nofollow').share__item.share__item_mail
+
+				.product-buy
+					.product-buy-price
+						span.product-buy-price__label Цена
+						span.product-buy-price__val 590 р.
+
+					.product-buy__btn
+						.product-buy__count
+							a(href="#").btn.btn_grey Ожидается
+
+						.product-buy__arr
+						
+						a(href="#").btn.btn_green Товаров 1 на 60 рублей
+
+				.product-buy
+					.product-buy-price
+						span.product-buy-price__label Цена
+						span.product-buy-price__val 590 р.
+
+					.product-buy__btn
+						.product-buy__count
+							input(type="text", value="1")
+							a(href="#").btn.btn_yellow В корзину
+
+						.product-buy__arr
+						
+						a(href="#").btn.btn_green Товаров 1 на 60 рублей
+
+				.product-sect
+					.product-sect__title Описание
+					
+					.product-sect__content
+						.product-desc
+							.product-desc__item
+								.product-desc__img
+									img(src="/assets/img/uzor_100_100.jpg", alt="")
+
+								.product-desc__text Общее действие: регулирует гормональные функции у женщин; восстанавливает гормональный баланс во время грудного вскармливания, месячных и менопаузы; укрепляет ткани плода во время беременности; увеличивает способность яйцеклетки к оплодотворению; действует как мочегонное средство; снимает отечность; очищает кишечных; улучшает аппетит; нормализует процессы переваривания и усвоения пищи; устраняет симптомы гастрита и изжоги; нормализует месячный цикл у женщин; повышает фертильность; успокаивает нервную систему и психику; замедляет процессы старения; оздоровляет печень; улучшает цвет лица; обладает свойствами антидепрессанта и транквилизатора; улучшает перистальтику и устраняет запоры; питает и укрепляет половые органы у женщин.
+
+
+				.product-sect
+					.product-sect__title О продукте
+
+					.product-sect__content
+						p Лекарственный джем Шатавари гулам является уникальным препаратом для женщин, эффективно восстанавливающим нормальную функцию гинекологических органов. Это средство питает и омолаживает всю тазовую область у женщин, восстанавливает менструальный цикл, значительно увеличивает фертильность. Также используется при нарушениях в работе мочевого пузыря, почек и печени. Классический источник этой рецептуры: Сахасрайога Лехапракарана 7.
+						p Показания к применению:
+						p -​ Гинекология: воспалительные процессы женских половых органов, нарушения менструального цикла, менопауза, ПМС, болезненные ощущения во время полового акта, снижение либидо, бесплодие, риск выкидыша, бели, молочница, эндометриоз, гипоплазия матки, меноррагия
+						p -​ Мочевыделительная система: цистит, уретрит, мочекаменная болезнь
+						p -​ Печень: нарушение функции, гепатит
+						p -​ Приливы
+						p -​ Диабет
+						p -​ ЖКТ: дизентерия, диарея с кровотечением, повышенная кислотность, язвы, запоры
+						p -​ Нервная система и психика: невралгия, эпилепсия, обмороки, депрессия, невроз, истерия
+						p -​ Опорно-двигательный аппарат: ишиас, люмбаго, слабость
+						p Прочие: недостаточное количества молока при грудном вскармливании, слабость и потеря энергии, кашель, жар и лихорадочные состояния, общее снижение иммунитета
+
+				.product-sect
+					.product-sect__title Применение
+
+					.product-sect__content
+						p Рекомендуется принимать 10-15 г один раз в день. Передозировка может вызвать расстройство желудка. Перед началом применения рекомендуется проконсультироваться с врачом аюрведы.
+
+				.product-sect
+					.product-sect__title Состав
+
+					.product-sect__content
+						p Спаржа кистевидная, Топленое масло гхи, Тростниковый сахар-сырец, Кардамон, Хлорофитум, Якорцы стелющиеся, Индийская сарсапарилла, Молочай, Пуэрария, Перец длинный, Мумие, Бамбук. 
+
+				.product-sect
+					.product-sect__title С этим товаром покупают
+
+					.product-sect__content
+						.catalog-list
+							-
+								var list=[
+									{link:'/Bharat_Bazar/6149505/', img:'6149505.jpg', text:'Маш зелёный дроблёный (Moong Chilka) 500 г, Bharat Bazaar', price:'335', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
+									{link:'/Bharat_Bazar/6149520/', img:'6149520.jpg', text:'Маш зелёный (Moong Whole) 500 г, Bharat Bazaar', price:'295', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
+									{link:'/zdoroveda/6210323/', img:'6210323.jpg', text:'Суп турецкий с булгуром и красной чечевицей 250 г, "Здороведа"', price:'180', desc:'Ароматный и яркий по вкусу суп из национальной кухни Турции порадует всех любителей восточных блюд. 100% натуральный состав.'},
+								]
+
+							each item in list
+								.catalog-list__item
+									.catalog-list__content
+										a.catalog-list__img(href=item.link)
+											img(src="/assets/img/"+item.img, alt="")
+
+											if(item.like || item.sale || item.spec || item.top || item.hit || item.hit_season ||item.new_collection ||item.new || item.new_compl)
+												span.catalog-list__sticker
+													if(item.like)
+														img(src="/assets/img/sticker-like.png", alt="")
+													if(item.sale)
+														img(src="/assets/img/sticker-sale.png", alt="")
+													if(item.spec)
+														img(src="/assets/img/sticker-spec.png", alt="")
+													if(item.top)
+														img(src="/assets/img/sticker-top.png", alt="")
+													if(item.hit)
+														img(src="/assets/img/sticker-hit.png", alt="")
+													if(item.new_collection)
+														img(src="/assets/img/sticker-new-collection.png", alt="")
+													if(item.new)
+														img(src="/assets/img/sticker-new.png", alt="")
+													if(item.hit_season)
+														img(src="/assets/img/sticker-hit-season.png", alt="")
+													if(item.new_compl)
+														img(src="/assets/img/sticker-new-compl.png", alt="")
+
+											if(item.sale)
+												span.catalog-list__sale= item.sale
+
+											if(item.spec)
+												span.catalog-list__sale.catalog-list__sale_light-blue= item.spec
+
+										.catalog-list__text
+											a(href=item.link)= item.text
+
+										.catalog-list__price
+											if(item.old_price)
+												.catalog-list__old-price= item.old_price
+											.catalog-list__cur-price= item.price
+												|-
+
+										.catalog-list__desc= item.desc
+
+									.catalog-list__bottom
+										if(item.unavailable)
+											a(href="#").catalog-list__link Сообщить о поступлении
+										else
+											a(href="#").btn.btn_green В корзину
+
+				.product-sect
+					.product-sect__title Другие виды шатавари
+
+					.product-sect__content
+						.product-other
+							-
+								var list=[
+									{img:'194.jpg', text:'Шатавари является одним из основных омолаживающих эликсиров для женщин. Обновляет, тонизирует, смягчает и улучшает цвет кожи. Снимает мышечные спазмы, раздражения, нормализует водный баланс кожи. Шатавари успокаивает и смягчает Вата-дошу, также хорошо подходит для Питты.'},
+									{img:'146858.jpg', text:'Согласно Аюрведе, лучший тоник для женского здоровья. Улучшает работу, оздоравливает репродуктивную и гормональную системы.'},
+									{img:'152952.jpg', text:'Шатавари или экстракт гималайского Asparagus racemasus - натуральное средство, считающееся в Аюрведе лучшим женским тоником. Применяется для профилактики и лечения множества заболеваний репродуктивной и мочеполовой системы, а также для общего оздоровления и омоложения. '},
+								]
+
+							each item in list
+								.product-other__item
+									a(href="#").product-other__img
+										img(src="/assets/img/"+item.img, alt="")
+
+									a(href="#").product-other__text=item.text
+
+				.product-sect
+					.product-sect__title Отзывы
+
+					.product-sect__content
+						.review-list.js-review-list
+							.review-list__preview
+								.review
+									.review__top
+										.review__date 13.09.2018 12:55:50 
+										.review__name Ирина
+
+									.review__text жутко приторная штука. На банке написано принимать по столовой ложке 2р в день, я не знаю, как это можно даже 1 раз доесть
+
+							.review-list__full.js-review-full
+								.review
+									.review__top
+										.review__date 15.09.2018 12:55:50 
+										.review__name Светлана
+
+									.review__text очень понравилось
+
+							.review-list__more
+								span.js-review-list-switch(data-text='скрыть') показать все
+
+
+				.product-sect
+					.product-sect__title Оставить отзыв
+
+					.product-sect__content
+						form.form-review
+							.form-review__content
+								.form-review__field
+									.form-review__label Представтесь
+									.form-review__input
+										input(type="text")
+
+								.form-review__field.form-review__field_full
+									.form-review__label Ваше сообщение
+									.form-review__input
+										textarea
+
+							.form-review__bottom
+								.form-review-captcha
+									.form-review-captcha__img
+										img(src="/assets/img/captcha.png", alt="")
+
+									input(type="text")
+
+								button(type="submit").btn Отправить
+
+	section.slider-product-wrap
+		.slider-product-wrap__title Распродажа
+
+		.slider-product.js-slider-product
+			-
+				var list=[
+					{img:'product-slide1.jpg', text:'Маш зелёный дроблёный (Moong Chilka) 500 г, Bharat Bazaar', link:'/Bharat_Bazar/6149505/'},
+					{img:'product-slide2.jpg', text:'Маш зелёный (Moong Whole) 500 г, Bharat Bazaar', link:'/Bharat_Bazar/6149520/'},
+					{img:'product-slide3.jpg', text:'Суп турецкий с булгуром и красной чечевицей 250 г, "Здороведа"', link:'/zdoroveda/6210323/'},
+					{img:'product-slide4.jpg', text:'Суп старорусский с полбой и зелёной чечевицей 250 г, "Здороведа"', link:'/zdoroveda/6210331/'},
+					{img:'product-slide5.jpg', text:'Суп индийский с машем и красной чечевицей 250 г, "Здороведа"', link:'/zdoroveda/6210332/'},
+					{img:'product-slide6.jpg', text:'Суп мексиканский с рисом и кукурузой 250 г, "Здороведа"', link:'/zdoroveda/6210333/'},
+					{img:'product-slide7.jpg', text:'Суп гороховый веганский 250 г, "Здороведа"', link:'/zdoroveda/6210335/'},
+					{img:'product-slide8.jpg', text:'Суп болгарский с зелёной чечевицей и сельдереем 250 г, "Здороведа"', link:'/zdoroveda/6210342/'},
+					{img:'product-slide9.jpg', text:'Суп итальянский с красной чечевицей и макаронами "Здороведа", 250 г', link:'/loyal_customer_gift/6210345/'},
+					{img:'product-slide10.jpg', text:'Китчери из зелёного маша и риса 250 г, "Здороведа"', link:'/zdoroveda/6210363/'},
+					{img:'product-slide11.jpg', text:'Плов индийский "Бириани" 250 г, "Здороведа"', link:'/hit/6210364/'},
+					{img:'product-slide12.jpg', text:'Плов с белыми грибами 250 г, "Здороведа"', link:'/zdoroveda/6210365/'},
+				]
+
+			each item in list
+				.slider-product__item
+					a(href=item.link).slider-product__link
+						.slider-product__img(style="background-image: url(/assets/img/"+item.img+")")
+						.slider-product__text= item.text
