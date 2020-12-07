@@ -24,6 +24,15 @@ a{
 
 a:hover{text-decoration: none;}
 
+.link-text{color: inherit;}
+
+.link-blue{
+	color: #0000ee;
+	text-decoration: none;
+}
+
+.link-blue:hover{text-decoration: underline;}
+
 p{
 	padding: 0;
 	margin: 0 0 17px 0;
@@ -82,8 +91,6 @@ main{
 	width: 100%;
 	font-size: rem(14px);
 }
-
-.page-wrap{padding: 40px;}
 
 .btn,
 input[type="submit"].btn,

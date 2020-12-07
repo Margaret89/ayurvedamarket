@@ -1,0 +1,27 @@
+/*-------------- page -----------------*/
+.page-wrap{padding: 40px;}
+
+.page{
+	color: #696969;
+
+	&__slogan{
+		@include font(normal, normal, rem(14px), 1.2, #696969);
+		margin-bottom: 5px;
+	}
+
+	&__header{
+		display: flex;
+		align-items: center;
+		height: 372px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: 20px 50px;
+
+		h1,
+		.h1{
+			@include font(normal, bold, rem(45px), 1.2, #fff);
+			text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+		}
+	}
+}
