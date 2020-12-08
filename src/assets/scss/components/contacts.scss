@@ -1,0 +1,22 @@
+/*-------------- contacts -----------------*/
+.contacts{
+	&__item{
+		display: flex;
+		align-items: center;
+		margin-bottom: 13px;
+	}
+
+	&__icon{
+		width: 18px;
+		margin-right: 8px;
+	}
+
+	&__text,
+	&__text a{
+		font-family: Arial;
+		@include font(normal, normal, rem(14px), 1.2, $color-text);
+		text-decoration: none;
+	}
+
+	&__text a:hover{text-decoration: none;}
+}

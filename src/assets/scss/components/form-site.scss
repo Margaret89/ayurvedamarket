@@ -1,0 +1,105 @@
+/*-------------- form-site -----------------*/
+.form-site{
+	max-width: 645px;
+	font-family: Arial;
+	padding: 18px;
+	margin-top: 40px;
+
+	&__text{
+		@include font(normal, normal, rem(16px), 1.2, #2c3e50);
+		margin-bottom: 24px;
+	}
+
+	&__field{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 36px;
+	}
+
+	&__label{
+		width: 185px;
+		@include font(normal, normal, rem(12px), 1.2, #222);
+		padding-right: 10px;
+	}
+
+	&__input{width: calc(100% - 185px);}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		display: inline-block;
+		height: rem(30px);
+		width: calc(100% - 40px);
+		font-family: Arial;
+		@include font(normal, normal, rem(13px), rem(28px), #222);
+		padding: 0 8px;
+		margin: 0;
+		border: solid 1px #c1c9cb;
+		border-radius: 3px;
+		outline: 0;
+		background: #fff;
+		transition: all 0.2s ease 0s;
+	}
+
+	textarea{
+		height: rem(94px);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder,
+	input[type="text"]::-webkit-input-placeholder,
+	input[type="email"]::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder,
+	input[type="text"]:-moz-placeholder,
+	input[type="email"]:-moz-placeholder,
+	textarea:-moz-placeholder{
+		color: #929292;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+		border-color: $color-orange;
+	}
+
+	&__bottom{
+		margin-top: 12px;
+		text-align: center;
+
+		.btn,
+		input[type="submit"].btn,
+		button.btn{
+			height: rem(41px);
+			padding: 0 20px;
+			border-radius: 15px;
+			background: #32b705;
+			font-size: rem(16px);
+			color: #fff;
+			text-transform: none;
+		}
+
+		.btn,
+		input[type="submit"].btn,
+		button.btn{
+			background: #2a9b05;
+			color: #fff;
+		}
+	}
+
+	.form-polit{margin-bottom: 10px;}
+}
+
+.form-polit{
+	display: flex;
+	justify-content: center;
+
+	&__label{
+		@include font(normal, normal, rem(12px), 1.2, #222);
+		margin-left: 5px;
+	}
+}

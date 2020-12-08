@@ -1,0 +1,121 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Контакты';
+
+block content
+	.page-wrap
+		section
+			.page
+				.page__slogan Приезжайте к нам в магазин на м. Электрозаводская. Будем рады встрече с вами!
+
+				.map
+					script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A65731892af09a20837a04a85fc50d5e678253fda5a38c671d5a987105a70f727&width=100%25&height=400&lang=ru_RU&scroll=true')
+
+
+				.h2 Контакты
+				.contacts
+					-
+						var list=[
+							{img:'ic-mail.png', text:'market@ayurvedamarket.ru', link:'mailto:market@ayurvedamarket.ru'},
+							{img:'ic-call.png', text:'+7 (495) 120-10-54', link:'tel:+74951201054'},
+							{img:'ic-skype.png', text:'ayurvedamarket', link:'http://skype:Ayurvedamarket?chat'},
+							{img:'ic-vk.png', text:'ayurvedamarket_ru', link:'https://vk.com/ayurvedamarket_ru'},
+							{img:'ic-fb.png', text:'ayurvedamarket.ru', link:'https://www.facebook.com/ayurvedamarket.ru/'},
+							{img:'ic-in.png', text:'ayurvedamarket.ru', link:'https://www.instagram.com/ayurvedamarket.ru/'},
+						]
+					each item in list
+						.contacts__item
+							.contacts__icon
+								img(src="/assets/img/"+item.img, alt="")
+							.contacts__text= item.text
+
+
+				.h2 Адрес
+				p(style='font-size: 1.125rem')
+					img(src="/assets/img/Moscow_Metro.png", alt="", style="display: inline-block; width: 20px; margin: 0 0 2px 0;")
+					| «Электрозаводская», Барабанный переулок, д.&nbsp;4/4, оранжевый офисный центр «На Барабанном» - вход&nbsp;5, этаж&nbsp;2 шоурум Аюрведамаркет. 
+				
+				.h2 Режим работы
+				p Пн-Пт: 9:00-19:00,
+				p Сб и Вс: 10:00-17:00,
+
+				.h2 Как пройти?
+				p(style="font-size: 1.125rem") Пешком от станции метро «Электрозаводская»:
+
+				ul.list-circle.list-circle_green
+					li Из дверей метро налево, в подземный переход
+						+svg('ic-check','ic-check', '16', '12')
+
+					li Из перехода вверх по диагонали, через двор — вы оказываетесь в Барабанном переулке
+						+svg('ic-check','ic-check', '16', '12')
+
+					li Далее вверх по улице до <span style="color: #ff6600">оранжевого</span> входа (проходная <i>Офисного центра на Барабанном</i>)
+						+svg('ic-check','ic-check', '16', '12')
+
+					li На охране сообщить, что вы направляетесь в Аюрведамаркет
+						+svg('ic-check','ic-check', '16', '12')
+
+					li <b>На внутренней территории вход 5</b> (цифру не видно от входа, но она там — между 4 и 6)
+						+svg('ic-check','ic-check', '16', '12')
+
+					li Далее на 2 этаж, офис №3 
+						+svg('ic-check','ic-check', '16', '12')
+
+				p(style="font-size: 1.125rem;")
+					i Поздравляем, вы справились.
+
+				br
+
+				p(style="font-size: 1.125rem;")
+					b Наши реквизиты:
+
+				p(style="font-size: 1rem;") ООО "СОЗВУЧИЕ"
+					br
+					|ОГРН 5157746165319
+
+					form.form-site
+						.form-site__text Подписавшись на нашу рассылку, Вы сможете получать самую актуальную информацию обо всех акциях, спецпредложениях, новинках и распродажах. 
+
+						.form-site__content
+							.form-site__field
+								.form-site__label Ваше имя *
+								.form-site__input
+									input(type="text")
+
+							.form-site__field
+								.form-site__label Ваш E-mail *
+								.form-site__input
+									input(type="text")
+
+						.form-site__bottom
+							.form-polit
+								input(type="checkbox", id="polit")
+								.form-polit__label(for="polit")  Я согласен с политикой конфиденциальности
+
+							button(type="submit").btn.btn_green Подписаться
+
+
+				.article
+					.article__list
+						-
+							var list=[
+								{link:'/about_us/BD', img:'about1.jpg', title:'Бесплатная доставка', text:'Наша любимая акция! Выбирайте настоящую Аюрведу, экономя на доставке.'},
+								{link:'/about_us/policy', img:'about2.jpg', title:'Политика конфиденциальности', text:'Политика конфиденциальности персональных данных.'},
+								{link:'/about_us/reviews', img:'about3.jpg', title:'Отзывы', text:'Делитесь своим мнением, впечатлениями и замечаниями о товарах и работе магазина.'},
+								{link:'/about_us/payment', img:'about4.jpg', title:'Способы оплаты', text:'Картой, наличными, переводом — оплачивайте покупки любым удобным для Вас способом.'},
+								{link:'/about_us/contacts', img:'about5.jpg', title:'Контакты', text:'Приезжайте к нам в магазин на м. Электрозаводская. Будем рады встрече с вами!'},
+								{link:'/about_us/discounts', img:'about6.jpg', title:'Программа скидок', text:'Накапливайте скидку постоянного покупателя с первой покупки.'},
+								{link:'/about_us/about_us', img:'about7.jpg', title:'О нас', text:'Об Аюрведамаркет, наших проектах и о том, что обычно остаётся за кадром.'},
+							]
+
+						each item in list
+							.article__item
+								a.article__img(style="background-image: url(/assets/img/"+item.img+")", href=item.link)
+
+								.article__content
+									.article__title
+										a(href=item.link)= item.title
+
+									.article__text
+										a(href=item.link)= item.text
