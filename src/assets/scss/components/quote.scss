@@ -23,3 +23,19 @@
 	&::before{top: 0;}
 	&::after{bottom: 0;}
 }
+
+.quote-author{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+
+	&__text{
+		@include font(italic, 500, rem(16px), 1.2, #696969);
+		text-align: right;
+		width: calc(100% - 110px);
+		max-width: 700px;
+	}
+
+	&__img{width: 100px;}
+}
