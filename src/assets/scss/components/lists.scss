@@ -1,6 +1,7 @@
 /*-------------- lists -----------------*/
 .list-circle{
 	@include reset-list;
+	margin-bottom: 30px;
 
 	li{
 		@include reset-list;
@@ -20,12 +21,14 @@
 		margin-top: -2px;
 	}
 
-	&_green li{margin-bottom: 5px;}
+	&_green li{margin-bottom: 11px;}
 	&_green li::before{background: #66cc00;}
 }
 
 .list-arrow{
 	@include reset-list;
+	padding-left: 4px;
+	margin-bottom: 35px;
 
 	li{
 		@include reset-list;
@@ -34,7 +37,10 @@
 
 	li::before{
 		content: '\2192';
-		margin-right: 10px;
+		margin-right: 6px;
 		margin-top: -2px;
 	}
+
+	.link-text{text-decoration: none;}
+	.link-text:hover{text-decoration: underline;}
 }

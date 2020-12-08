@@ -1,8 +1,7 @@
 /*-------------- article -----------------*/
 .article{
-	margin-left: -40px;
-	margin-right: -40px;
-	padding: 40px;
+	margin: 80px -40px 0;
+	padding: 32px 40px 0;
 	border-top: 1px solid #ddd;
 
 	&__list{
@@ -16,7 +15,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: calc(50% - 20px);
-		margin: 0 10px 20px;
+		margin: 0 10px 25px;
 	}
 
 	&__img{
@@ -29,7 +28,7 @@
 		text-decoration: none;
 	}
 
-	&__content{width: calc(100% - 180px);}
+	&__content{width: calc(100% - 184px);}
 
 	&__title,
 	&__title a{
@@ -39,7 +38,7 @@
 		text-decoration: none;
 	}
 
-	&__title{margin-bottom: 20px;}
+	&__title{margin-bottom: 25px;}
 	&__title a:hover{text-decoration: underline;}
 
 	&__text,

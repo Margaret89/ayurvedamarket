@@ -15,15 +15,15 @@ block content
 
 				.h2 Условия доставки
 				
-				ul.list-arrow
-					li 
-						a(href="#moscow") По Москве и Подмосковью
+				ul.list-arrow(style="font-size: 1.125rem;")
 					li
-						a(href="#russia") В другие города и регионы России
+						a(href="#moscow").link-text По Москве и Подмосковью
 					li
-						a(href="#pickup") Самовывоз
+						a(href="#russia").link-text В другие города и регионы России
+					li
+						a(href="#pickup").link-text Самовывоз
 
-				p Доставка Ваших заказов является одним из наших приоритетов. Занимаясь здоровьем, нам хотелось бы чтобы сервис Ayurvedamarket дарил Вам радость, поэтому, пожалуйста, если по какой-то причине этого не произошло и доставка огорчила Вас, свяжитесь с нами по телефону <u>8 (495) 120-10-54</u> — мы постараемся всё исправить. Будем рады, если сумеем оправдать Ваше доверие.
+				p(style="font-size: 1rem;") Доставка Ваших заказов является одним из наших приоритетов. Занимаясь здоровьем, нам хотелось бы чтобы сервис Ayurvedamarket дарил Вам радость, поэтому, пожалуйста, если по какой-то причине этого не произошло и доставка огорчила Вас, свяжитесь с нами по телефону <u>8 (495) 120-10-54</u> — мы постараемся всё исправить. Будем рады, если сумеем оправдать Ваше доверие.
 
 				a(name="moscow")
 				.h2 Доставка по Москве и Подмосковью
@@ -46,7 +46,7 @@ block content
 					| 
 					| Boxberry в течение двух дней после согласования условий получения.
 
-				img(src="/assets/img/russia-delivery.png", alt="")
+				img(src="/assets/img/russia-delivery.png", alt="", style="width: 700px;")
 
 				p(style="font-size: 1rem;") Найти ближайший пункт выдачи заказов 
 					b
@@ -91,8 +91,8 @@ block content
 					b Заказ будет ждать Вас в течение 5-ти дней по адресу:
 
 				p(style='font-size: 1.125rem')
-					img(src="/assets/img/Moscow_Metro.png", alt="", style="display: inline-block; width: 20px; margin-right: 2px;")
-					| «Электрозаводская», Барабанный переулок, д. 4/4, на территории офисного центра вход № 5, этаж 2, офис 3
+					img(src="/assets/img/Moscow_Metro.png", alt="", style="display: inline-block; width: 20px; margin: 0 0 2px 0;")
+					| «Электрозаводская», Барабанный переулок, д.&nbsp;4/4, на территории офисного центра вход&nbsp;№&nbsp;5, этаж&nbsp;2, офис&nbsp;3
 
 				.map
 					script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A65731892af09a20837a04a85fc50d5e678253fda5a38c671d5a987105a70f727&width=100%25&height=400&lang=ru_RU&scroll=true')

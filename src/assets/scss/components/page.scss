@@ -1,27 +1,37 @@
 /*-------------- page -----------------*/
-.page-wrap{padding: 40px;}
+.page-wrap{
+	padding: 40px 40px 15px;
+
+	.article{margin-bottom: -25px;}
+}
 
 .page{
 	color: #696969;
 
 	&__slogan{
 		@include font(normal, normal, rem(14px), 1.2, #696969);
-		margin-bottom: 5px;
+		margin-top: 17px;
+		margin-bottom: 10px;
 	}
 
 	&__header{
 		display: flex;
 		align-items: center;
 		height: 372px;
+		max-width: 850px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		padding: 20px 50px;
+		margin-bottom: 34px;
 
 		h1,
 		.h1{
-			@include font(normal, bold, rem(45px), 1.2, #fff);
+			@include font(normal, bold, rem(62px), 1.2, #fff);
 			text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
 		}
 	}
+
+	img{margin: 20px 0;}
+	p + img{margin-top: 0;}
 }
