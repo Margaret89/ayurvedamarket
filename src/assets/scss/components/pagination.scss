@@ -23,7 +23,8 @@
 	}
 
 	&__arr:hover,
-	&__item:hover{
+	&__item:hover,
+	&__item.current{
 		background: $color-orange;
 		border-color: $color-orange;
 		color: #fff;
@@ -41,4 +42,22 @@
 	}
 
 	&__arr:hover .icon{fill: #fff;}
+
+	&_orange{margin: 14px 0;}
+
+	&_orange &__arr,
+	&_orange &__item,
+	&_orange &__more{
+		padding: 6px 12px;
+		color: #fff;
+		background: #f7941e;
+		border: 0;
+	}
+
+	&_orange &__arr .icon{fill: #fff;}
+
+	&_orange &__item:hover,
+	&_orange &__item.current{
+		background: #cd7a13;
+	}
 }

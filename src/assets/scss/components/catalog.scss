@@ -140,14 +140,15 @@
 		justify-content: center;
 		width: 70px;
 		height: 68px;
-		background: url(/assets/img/bg-sale.png) no-repeat -5px -5px;
+		background: url(/assets/img/bg-sale.png) no-repeat center;
+		background-size: contain;
 		@include font(normal, bold, rem(20px), 1.2, #fff);
 		position: absolute;
 		bottom: 0;
 		right: -15px;
 	}
-
-	&__sale_light-blue{background-position: -5px -82px;}
+	
+	&__sale_light-blue{background-image: url(/assets/img/bg-sale-light-blue.png);}
 
 	&__text{
 		font-family: Arial;
@@ -236,6 +237,60 @@
 	&__link{
 		font-family: Arial;
 		@include font(normal, normal, rem(12px), 1.2, #04bbde);
+	}
+
+	&__status{
+		font-family: $font-helvetica;
+		@include font(normal, 300, rem(14px), 1.2, #5c4621);
+		text-transform: uppercase;
+		margin-top: 14px;
+	}
+
+	&_row{margin-right: 0;}
+
+	&_row &__item{
+		flex-direction: row;
+		width: 100%;
+		margin-left: 0;
+		padding: 15px 10px;
+	}
+
+	&_row &__content{
+		display: flex;
+		align-items: center;
+		text-align: left;
+	}
+
+	&_row &__img{
+		flex: 0 0 100px;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 0;
+	}
+
+	&_row &__info{padding: 0 30px;}
+	&_row &__text{padding: 0;}
+
+	&_row &__price{
+		font-size: rem(16px);
+		margin-bottom: 18px;
+		font-weight: 500;
+	}
+
+	&_row &__cur-price{color: #5c4621;}
+	&_row &__old-price{font-size: rem(12px);}
+
+	&_row &__bottom{text-align: right;}
+
+	&_row &__sticker{
+		max-width: 50%;
+		right: 0;
+	}
+
+	&_row &__sale{
+		width: 35px;
+		height: 34px;
+		font-size: rem(12px);
 	}
 }
 

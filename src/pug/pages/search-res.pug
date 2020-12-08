@@ -1,0 +1,108 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Результаты поиска';
+
+block content
+	section.search-res
+		.search-res__content
+			.search-res__title Результаты поиска по запросу: мед 
+			.search-res__count Найдено 56 товаров
+
+			.pagination.pagination_orange
+				a(href="#").pagination__item.current 1
+				a(href="#").pagination__item 2
+
+			.catalog-sort
+				.catalog-sort__item
+					.catalog-sort__title Сортировать по цене
+					.catalog-sort__arr
+						.catalog-sort__arr-asc.active
+							+svg('ic-arrow-up','ic-arrow-up', '23', '12')
+						.catalog-sort__arr-desc
+							+svg('ic-arrow-down','ic-arrow-down', '23', '12')
+
+				.catalog-sort__item
+					.catalog-sort__title по наличию
+					.catalog-sort__arr
+						.catalog-sort__arr-asc
+							+svg('ic-arrow-up','ic-arrow-up', '23', '12')
+						.catalog-sort__arr-desc
+							+svg('ic-arrow-down','ic-arrow-down', '23', '12')
+		
+			.catalog-list.catalog-list_row
+				-
+					var list=[
+						{link:'/Bharat_Bazar/6149505/', img:'6149505.jpg', text:'Маш зелёный дроблёный (Moong Chilka) 500 г, Bharat Bazaar', price:'335', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
+						{link:'/Bharat_Bazar/6149520/', img:'6149520.jpg', text:'Маш зелёный (Moong Whole) 500 г, Bharat Bazaar', price:'295', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
+						{link:'/zdoroveda/6210323/', img:'6210323.jpg', text:'Суп турецкий с булгуром и красной чечевицей 250 г, "Здороведа"', price:'180', desc:'Ароматный и яркий по вкусу суп из национальной кухни Турции порадует всех любителей восточных блюд. 100% натуральный состав.'},
+						{link:'/hit/6210364/', img:'6210364.jpg', text:'Плов индийский "Бириани" 250 г, "Здороведа"', price:'180', desc:'Национальное блюдо индийской кухни - бирьяни - ароматный плов с пряностями, овощами и сухофруктами. Полностью натуральный состав. Подходит для вегетарианцев.', like:'true'},
+						{link:'/snack/6748324/', img:'6748324.jpg', text:'Чипсы фруктовые "Апельсин" 30 г, Сушки (срок годности - до 10 декабря 2020 г.)', old_price:'120 р.', price:'60', desc:'Натуральные ломтики спелых апельсинов, высушенные в дегидраторе при температуре не более 40 градусов.', sale:'-50%'},
+						{link:'/no_discont/6987598/', img:'6987598.jpg', text:'Масло Гхи топлёное пищевое 325 г, "TM LALITA" (Спецпредложение от Ayurvedamarket)', old_price:'895 р.', price:'760', desc:'Гхи – особым образом перетопленное сливочное масло. Наиболее полезно для приготовления пищи, способствует её усвоению. Прекрасно подходит для жарки. Блюда, приготовленные на масле Гхи, обладают неповторимым вкусом и ароматом.', spec:'-15%'},
+						{link:'/indijskie-specii-ayurveda-kupit/kurkuma-molotaya-shree-masala/', img:'1220.jpg', text:'Куркума молотая 100 г, "Золото Индии"', price:'166', desc:'Приправа с приятным ароматом и лёгким пряным вкусом, подходит для любых блюд, придаёт им солнечно-жёлтый цвет, также способствует улучшению пищеварения. Может использоваться в лечебных и косметических целях. Подходит для всех трёх дош.', top:'true'},
+						{link:'/saharaja/6166725/', img:'6166725.jpg', text:'Сахар тростниковый нерафинированный "Мусковадо тёмный" 450 г, "Сахараджа"', price:'225', desc:'Индийский мусковадо - мелкокристаллический сахар с большим содержанием патоки, ярким ароматом и тёмно-коричневым цветом. Подходит для добавления в любые напитки: чай, кофе, какао, а также для приготовления соусов и выпечки.', hit:'true'},
+						{link:'/professional/6379382/', img:'6379382.jpg', text:'Масло Гхи топлёное пищевое 1,8 кг, "Медведь & Слон"', price:'3450', desc:'Масло гхи изготовлено из отборного коровьего масла высшего качества. Перетопленное особым способом на огне и затем очищенное, масло имеет неповторимый сливочный вкус и представляет собой очень полезный для здоровья продукт. Придаёт любым привычным блюдам, особенно жареным, совершенно уникальный вкус. Экономичная упаковка для ежедневного использования.', unavailable:'true', new_collection:'true'},
+						{link:'/sauce/7043557/', img:'7043557.jpg', text:'Соус гранатовый 250 мл, Al-Rabih', price:'410', desc:'Гранатовый соус используется как приправа к основным блюдам из мяса, рыбы и птицы, как маринад или добавка к салатам, десертам. Не содержит консервантов и искусственных добавок.', new:'true'},
+						{link:'/sweets/i1311/', img:'1311.jpg', text:'Мармелад имбирный 125 г, Gingerbon', price:'165', desc:'100% вкусный натуральный продукт для любителей полезных сладостей. Конфеты-тянучки из натурального имбиря. Улучшают пищеварение, согревают, помогают при простуде, облегчают кашель и боль в горле.', hit_season:'true'},
+						{link:'/honey_and_tea/6641931/', img:'6641944.jpg', text:'Мёд вересковый (Удмуртия) 1200 г', price:'1380', desc:'Отборный вересковый мёд, собираемый в Нечкинском заповеднике в Среднем Прикамье. Обладает слегка горьковатым, терпким вкусом и сильным теплым древесно-фруктовым ароматом. Превосходное природное кровеочистительное и мочегонное средство.', new_compl:'true'},
+					]
+
+				each item in list
+					.catalog-list__item
+						.catalog-list__content
+							a.catalog-list__img(href=item.link)
+								img(src="/assets/img/"+item.img, alt="")
+
+								if(item.like || item.sale || item.spec || item.top || item.hit || item.hit_season ||item.new_collection ||item.new || item.new_compl)
+									span.catalog-list__sticker
+										if(item.like)
+											img(src="/assets/img/sticker-like.png", alt="")
+										if(item.sale)
+											img(src="/assets/img/sticker-sale.png", alt="")
+										if(item.spec)
+											img(src="/assets/img/sticker-spec.png", alt="")
+										if(item.top)
+											img(src="/assets/img/sticker-top.png", alt="")
+										if(item.hit)
+											img(src="/assets/img/sticker-hit.png", alt="")
+										if(item.new_collection)
+											img(src="/assets/img/sticker-new-collection.png", alt="")
+										if(item.new)
+											img(src="/assets/img/sticker-new.png", alt="")
+										if(item.hit_season)
+											img(src="/assets/img/sticker-hit-season.png", alt="")
+										if(item.new_compl)
+											img(src="/assets/img/sticker-new-compl.png", alt="")
+
+								if(item.sale)
+									span.catalog-list__sale= item.sale
+
+								if(item.spec)
+									span.catalog-list__sale.catalog-list__sale_light-blue= item.spec
+
+							.catalog-list__info
+								.catalog-list__text
+									a(href=item.link)= item.text
+
+								.catalog-list__status
+									if(item.unavailable)
+										|В наличии
+									else
+										|Ожидается
+								
+
+						.catalog-list__bottom
+							.catalog-list__price
+								if(item.old_price)
+									.catalog-list__old-price= item.old_price
+								.catalog-list__cur-price= item.price
+									|-
+
+							if(item.unavailable)
+								a(href="#").catalog-list__link Сообщить о поступлении
+							else
+								a(href="#").btn.btn_green В корзину
+
+			.pagination.pagination_orange
+				a(href="#").pagination__item.current 1
+				a(href="#").pagination__item 2

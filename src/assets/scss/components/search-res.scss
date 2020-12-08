@@ -1,0 +1,24 @@
+/*-------------- search-res -----------------*/
+.search-res{
+	background: #fff;
+	margin-left: -1px;
+	margin-right: -1px;
+	padding: 20px;
+
+	&__content{
+		max-width: 740px;
+		margin: 0 auto;
+	}
+
+	&__title,
+	&__count{
+		font-family: $font-helvetica;
+		@include font(normal, normal, rem(20px), 1.2, #3f3d1d);
+		margin-bottom: 20px;
+	}
+
+	&__count{color: #5c4621;}
+	&__count + .pagination{margin-top: 0;}
+
+	.catalog-sort{padding: 17px 0 8px;}
+}
