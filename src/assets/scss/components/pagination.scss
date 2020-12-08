@@ -1,0 +1,44 @@
+/*-------------- pagination -----------------*/
+.pagination{
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	&__arr,
+	&__item,
+	&__more{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $font-helvetica;
+		@include font(normal, normal, rem(15px), 1.2, #565656);
+		text-decoration: none;
+		padding: 3px 6px;
+		margin-right: 3px;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__arr,
+	&__item{
+		border: solid 1px #ddd;
+	}
+
+	&__arr:hover,
+	&__item:hover{
+		background: $color-orange;
+		border-color: $color-orange;
+		color: #fff;
+	}
+
+	&__more{
+		font-weight: bold;
+	}
+
+	&__arr{
+		.icon{
+			fill: #565656;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&__arr:hover .icon{fill: #fff;}
+}

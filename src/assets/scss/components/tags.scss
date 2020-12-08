@@ -1,0 +1,25 @@
+/*-------------- tags -----------------*/
+.tags{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -3px;
+	margin-right: -3px;
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		font-family: $font-helvetica;
+		@include font(normal, 500, rem(11px), 1.2, #969391);
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 4px 5px;
+		border: solid 1px #cccac8;
+		margin: 3px;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item:hover{
+		color: $color-orange;
+		border-color: $color-orange;
+	}
+}

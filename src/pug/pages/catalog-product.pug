@@ -4,11 +4,10 @@ block variables
 	- var title = 'Список товаров';
 
 block content
-	section.catalog
-		.catalog__left
+	section.layout
+		.layout__left
+			.layout-header Разделы
 			.catalog-menu
-				.catalog-menu__title Разделы
-
 				ul.catalog-menu__list
 					-
 						var list=[
@@ -37,8 +36,9 @@ block content
 								if(item.new)
 									sup.catalog-menu__new new!
 
-				.catalog-menu__title Бренды
+			.layout-header Бренды
 
+			.catalog-menu
 				ul.catalog-menu__list
 					-
 						var list=[
@@ -73,7 +73,7 @@ block content
 								if(item.new)
 									sup.catalog-menu__new new!
 
-		.catalog__content
+		.layout__content
 			-
 				var breadcrumbs=[
 					{href:'/',name:'Главная'},

@@ -164,6 +164,31 @@ button.btn_yellow:hover{
 	color: #231F20;
 }
 
+.btn_border,
+input[type="submit"].btn_border,
+button.btn_border{
+	background: transparent;
+	border-color: #b6b2b1;
+	color: #969391;
+}
+
+.btn_border:hover,
+input[type="submit"].btn_border:hover,
+button.btn_border:hover{
+	background: transparent;
+	border-color: $color-orange;
+	color: $color-orange;
+}
+
+.btn_big,
+input[type="submit"].btn_big,
+button.btn_big{
+	height: 42px;
+	font-size: rem(15px);
+	line-height: rem(40px);
+	padding: 0 20px;
+}
+
 .code{
 	background-color: #f7f7f7;
 	border: 1px solid #e1e1e8;

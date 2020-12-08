@@ -29,11 +29,11 @@ block content
 						.cat-slider__img(style="background-image: url(/assets/img/"+item.img+")")
 						.cat-slider__text= item.text
 
-	section.catalog
-		.catalog__left
-			.catalog-menu
-				.catalog-menu__title Разделы
+	section.layout
+		.layout__left
+			.layout-header Разделы
 
+			.catalog-menu
 				ul.catalog-menu__list
 					-
 						var list=[
@@ -62,8 +62,9 @@ block content
 								if(item.new)
 									sup.catalog-menu__new new!
 
-				.catalog-menu__title Бренды
+			.layout-header Бренды
 
+			.catalog-menu
 				ul.catalog-menu__list
 					-
 						var list=[
@@ -98,7 +99,7 @@ block content
 								if(item.new)
 									sup.catalog-menu__new new!
 
-		.catalog__content
+		.layout__content
 			.catalog-sort
 				.catalog-sort__item
 					.catalog-sort__title Сортировать по цене

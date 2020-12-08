@@ -1,0 +1,243 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Блог';
+
+block content
+	section.blog-slider-wrap
+		.blog-slider-wrap__sticker Топ блога
+
+		.blog-slider.js-blog-slider
+			-
+				var list=[
+					{img:'blog-slide1.jpg', title:'СДЕЛАЙТЕ УТРО ДОБРЫМ: 7 практик на каждый день', text:'Начало дня — это и наш собственный восход. Проснувшись, уделите немного времени заботе о себе — так день начнется с гармоничных энергий и непременно станет теплее, светлее, осознаннее. Делимся советами, которые точно сделают утро добрым.', link:'/blog/ayurveda-na-kazhdyy-den/sdelayte-utro-dobrym-7-praktik-na-kazhdyy-den_7114163'},
+					{img:'blog-slide2.jpg', title:'ОСЕНЬ. Секреты Аюрведы', text:'Наш новый материал - про осень. Точнее, про то, как прожить ее с удовольствием, не болея, понимая, что происходит вокруг и внутри. Аюрведа дает нам такую возможность. Давайте воспользуемся.', link:'/blog/health/osen-sekrety-ayurvedy_7042562'},
+					{img:'blog-slide3.jpg', title:'Специальное интервью для Аюрведамаркет с доктором Унникришнаном', text:'Специальное интервью для Аюрведамаркет с доктором Унникришнаном – одним из первых специалистов, познакомивших Россию с аюрведой. Доктор уже более 24 лет живет и работает в Москве, а еще привозит зарекомендовавшие себя за много лет в московских аюрведических клиниках препараты фабрики Arya Vaidya Vilasini Vaidya Sala.', link:'/blog/ayurvedicheskie-brendy/special-noe-interv-yu-dlya-ayurvedamarketa-s-doktorom-unnikrishnanom_6996489'},
+					{img:'blog-slide4.jpg', title:'AMSARVEDA - лидер сегмента аюрведической косметики в России', text:'Мы с радостью поддерживаем марку AmsarVeda в России и не стесняемся признаваться в своих симпатиях, может быть, поэтому она – лидер продаж Аюрведамаркет в косметическом сегменте. Но, конечно, на самом деле у этого есть и более веские основания...', link:'/blog/ayurvedicheskie-brendy/amsarveda_6973579'},
+					{img:'blog-slide5.jpg', title:'Производство Baps Amrut', text:'Аюрведические продукты и средства BAPS AMRUT созданы с целью помочь каждому человеку достичь и сохранить совершенное здоровье. Baps Swaminarayan производит широкий ассортимент классических и запатентованных аюрведических и травяных составов. Эти проверенные временем средства терапевтически эффективны в профилактике и лечении различных заболеваний.', link:'/blog/ayurvedicheskie-brendy/proizvodstvo-baps-amrut_6954529'},
+					{img:'blog-slide6.jpg', title:'Уход и косметика', text:'В этом материале мы поделимся с вами некоторыми рецептами аюрведических средств, которые вы можете сами приготовить в домашних условиях. Попробуйте мягкие косметические средства и ритуалы Аюрведы, проверенные временем.', link:'/blog/ayurveda-na-kazhdyy-den/uhod-i-kosmetika_6948841'},
+					{img:'blog-slide7.jpg', title:'ВКУСНО&ПОЛЕЗНО: 5 рецептов для выходных', text:'Попробуйте необычные вкусные и полезные рецепты известных блюд, с практическими советами Галии Тенишевой — главным редактором журнала «Аюрведа и Йога».', link:'/blog/recepty/vkusno-polezno-5-receptov-dlya-vyhodnyh_6902846'},
+					{img:'blog-slide8.jpg', title:'4 рецепта кичари для разных дош', text:'Кичари – смесь риса с лущеным машем (мунг далом) и специями – одно из главных блюд в аюрведической кулинарии. Это блюдо идеально для весеннего сезона. И рис басмати, и маш имеют сладкий вкус, обладают охлаждающим действием и сладким эффектом после переваривания. Вместе они являются очень сбалансированной пищей, прекрасной белковой комбинацией. Это совершенная пища, которая легко переваривается, дает силу и жизнестойкость.', link:'/blog/health/4-recepta-kichari-dlya-raznyh-dosh_6898848'},
+					{img:'blog-slide9.jpg', title:'Весенний детокс с Асем Адылбаевой', text:'Под воздействием тепла весеннего солнца Капха-доша начинает увеличиваться, пищеварительный огонь понижается, и скопившиеся за зиму токсины провоцируют развитие многих заболеваний. Поэтому в этот период важно позаботиться об организме. В этом материале - несколько полезных и легко выполнимых весенних рекомендаций для здоровья от Асем Адылбаевой - врача аюрведы, бакалавра аюрведической медицины и хирургии (BAMS).', link:'/blog/health/vesenniy-detoks-s-asem_6898766'},
+				]
+			each item in list
+				.blog-slider__item
+					a(href=item.link).blog-slider__img(style="background-image: url(/assets/img/"+item.img+")")
+					.blog-slider__content
+						.blog-slider__title
+							a(href=item.link)= item.title
+						.blog-slider__text= item.text
+
+	section.layout
+		.layout__left
+			.layout-header Разделы
+
+			.catalog-menu
+				ul.catalog-menu__list
+					-
+						var list=[
+							{link:'/blog/ayurveda-dlya-detej', text:'Аюрведа для детей'},
+							{link:'/blog/ayurveda-dlya-zhenshin', text:'Аюрведа для женщин'},
+							{link:'/blog/ayurveda-dlya-muzhchin', text:'Аюрведа для мужчин'},
+							{link:'/blog/ayurveda-na-kazhdyy-den', text:'Аюрведа на каждый день'},
+							{link:'/blog/ayurvedicheskie-brendy', text:'Аюрведические бренды'},
+							{link:'/blog/ayurvedicheskie-pervoistochniki', text:'Аюрведические первоисточники'},
+							{link:'/blog/ayurvedicheskie-specialisty', text:'Аюрведические специалисты'},
+							{link:'/blog/beremennost', text:'Беременность: советы и рекомендации'},
+							{link:'/blog/bogi-indijskoj-mifologii', text:'Боги индийской мифологии'},
+							{link:'/blog/vedicheskaya-astrologiya', text:'Ведическая астрология'},
+							{link:'/blog/health', text:'Здоровье: лечение и профилактика заболеваний'},
+							{link:'/blog/masla', text:'Лечебные и пищевые масла'},
+							{link:'/blog/naturalnaya-kosmetika', text:'Натуральная косметика'},
+							{link:'/blog/nashi-rassilki', text:'Наши рассылки'},
+							{link:'/blog/news', text:'Новости'},
+							{link:'/blog/osnovy-ayurvedy', text:'Основы Аюрведы'},
+							{link:'/blog/putevoditel-po-indii', text:'Путеводитель по Индии'},
+							{link:'/blog/recepty', text:'Рецепты блюд и напитков'},
+							{link:'/blog/sezonnye-rekomendacii', text:'Сезонные рекомендации'},
+							{link:'/blog/soveti-hozyajkam', text:'Советы хозяйкам'},
+							{link:'/blog/praktiki', text:'Телесно-ориентированные и духовные практики'},
+							{link:'/blog/pitanie', text:'Характеристики продуктов питания по Аюрведе'},
+							{link:'/blog/celebnie-rasteniya', text:'Целебные растения'},
+						]
+					each item in list
+						li.catalog-menu__item
+							a(href=item.list).catalog-menu__link= item.text
+								if(item.new)
+									sup.catalog-menu__new new!
+
+			.layout-header Поиск
+			form.form-search.form-search_grey(action='/blog/search/' accept-charset='UTF-8' method='get')
+				input(name='q' type='text')
+				button(type='submit')
+					+svg('ic-search','ic-search', '20', '20')
+
+			.layout-header Последние комментарии
+
+			.layout-header Поиск по тегам
+			.tags
+				a.tags__item(href='/blog/tag/Здоровье+') Здоровье 
+				a.tags__item(href='/blog/tag/Рекомендации') Рекомендации
+				a.tags__item(href='/blog/tag/Основы+Аюрведы') Основы Аюрведы
+				a.tags__item(href='/blog/tag/Аюрведические+препараты') Аюрведические препараты
+				a.tags__item(href='/blog/tag/Очищение') Очищение
+				a.tags__item(href='/blog/tag/Целебные+растения') Целебные растения
+				a.tags__item(href='/blog/tag/Натуральная+косметика+') Натуральная косметика 
+				a.tags__item(href='/blog/tag/Специи') Специи
+				a.tags__item(href='/blog/tag/Доши') Доши
+				a.tags__item(href='/blog/tag/Исцеление') Исцеление
+				a.tags__item(href='/blog/tag/Практики') Практики
+				a.tags__item(href='/blog/tag/Рецепты') Рецепты
+				a.tags__item(href='/blog/tag/Масла') Масла
+				a.tags__item(href='/blog/tag/Астрология') Астрология
+				a.tags__item(href='/blog/tag/Йога') Йога
+				a.tags__item(href='/blog/tag/Травы') Травы
+				a.tags__item(href='/blog/tag/Антистресс') Антистресс
+				a.tags__item(href='/blog/tag/Иммунтитет') Иммунтитет
+				a.tags__item(href='/blog/tag/Планеты') Планеты
+				a.tags__item(href='/blog/tag/Женское+здоровье') Женское здоровье
+				a.tags__item(href='/blog/tag/Куркума') Куркума
+				a.tags__item(href='/blog/tag/Имбирь') Имбирь
+				a.tags__item(href='/blog/tag/Мудрость') Мудрость
+				a.tags__item(href='/blog/tag/Режим+дня') Режим дня
+				a.tags__item(href='/blog/tag/Дети') Дети
+				a.tags__item(href='/blog/tag/Детское+здоровье') Детское здоровье
+				a.tags__item(href='/blog/tag/Эфирные+масла') Эфирные масла
+				a.tags__item(href='/blog/tag/Кориандр') Кориандр
+				a.tags__item(href='/blog/tag/Медитация') Медитация
+				a.tags__item(href='/blog/tag/панчакарма') панчакарма
+				a.tags__item(href='/blog/tag/Трифала') Трифала
+				a.tags__item(href='/blog/tag/Фенхель') Фенхель
+				a.tags__item(href='/blog/tag/Чаванпраш') Чаванпраш
+				a.tags__item(href='/blog/tag/Ароматерапия') Ароматерапия
+				a.tags__item(href='/blog/tag/Асафетида') Асафетида
+				a.tags__item(href='/blog/tag/Боги') Боги
+				a.tags__item(href='/blog/tag/Закуски') Закуски
+				a.tags__item(href='/blog/tag/Капха-доша') Капха-доша
+				a.tags__item(href='/blog/tag/Корица') Корица
+				a.tags__item(href='/blog/tag/Масала') Масала
+				a.tags__item(href='/blog/tag/Мифология') Мифология
+				a.tags__item(href='/blog/tag/Оздоровительная+йога') Оздоровительная йога
+				a.tags__item(href='/blog/tag/Рецепты+напитков') Рецепты напитков
+				a.tags__item(href='/blog/tag/Рис') Рис
+				a.tags__item(href='/blog/tag/Что+подарить?') Что подарить?
+				a.tags__item(href='/blog/tag/Беременность') Беременность
+				a.tags__item(href='/blog/tag/Вата-доша') Вата-доша
+				a.tags__item(href='/blog/tag/Вторые+блюда+') Вторые блюда 
+				a.tags__item(href='/blog/tag/Десерты') Десерты
+				a.tags__item(href='/blog/tag/Живые+витамины') Живые витамины
+				a.tags__item(href='/blog/tag/Питта-доша+') Питта-доша 
+				a.tags__item(href='/blog/tag/Подарки') Подарки
+				a.tags__item(href='/blog/tag/Суставы+') Суставы 
+				a.tags__item(href='/blog/tag/Токсины') Токсины
+				a.tags__item(href='/blog/tag/Успех') Успех
+				a.tags__item(href='/blog/tag/Чёрная+соль') Чёрная соль
+				a.tags__item(href='/blog/tag/Шафран') Шафран
+				a.tags__item(href='/blog/tag/Шлаки') Шлаки
+				a.tags__item(href='/blog/tag/Ама') Ама
+				a.tags__item(href='/blog/tag/Ашвагандха') Ашвагандха
+				a.tags__item(href='/blog/tag/Калонджи') Калонджи
+				a.tags__item(href='/blog/tag/Кровяное+давление') Кровяное давление
+				a.tags__item(href='/blog/tag/Луна') Луна
+				a.tags__item(href='/blog/tag/Манго') Манго
+				a.tags__item(href='/blog/tag/Массаж') Массаж
+				a.tags__item(href='/blog/tag/Похудение') Похудение
+				a.tags__item(href='/blog/tag/Приветствие+солнцу') Приветствие солнцу
+				a.tags__item(href='/blog/tag/Психические+расстройства') Психические расстройства
+				a.tags__item(href='/blog/tag/Рецепты+закусок') Рецепты закусок
+				a.tags__item(href='/blog/tag/Сон+') Сон 
+				a.tags__item(href='/blog/tag/Сурья+намаскар+') Сурья намаскар 
+				a.tags__item(href='/blog/tag/Шамбала') Шамбала
+				a.tags__item(href='/blog/tag/Васту') Васту
+				a.tags__item(href='/blog/tag/Венера') Венера
+				a.tags__item(href='/blog/tag/Ганеша') Ганеша
+				a.tags__item(href='/blog/tag/Готу+Кола') Готу Кола
+				a.tags__item(href='/blog/tag/Запор') Запор
+				a.tags__item(href='/blog/tag/Здоровье+глаз') Здоровье глаз
+				a.tags__item(href='/blog/tag/Иммуностимулятор') Иммуностимулятор
+				a.tags__item(href='/blog/tag/Кожные+заболевания') Кожные заболевания
+				a.tags__item(href='/blog/tag/Марс') Марс
+				a.tags__item(href='/blog/tag/Меркурий') Меркурий
+				a.tags__item(href='/blog/tag/Метеоризм') Метеоризм
+				a.tags__item(href='/blog/tag/Мужское+здоровье') Мужское здоровье
+				a.tags__item(href='/blog/tag/Ожирение') Ожирение
+				a.tags__item(href='/blog/tag/Онкология') Онкология
+				a.tags__item(href='/blog/tag/Подагра') Подагра
+				a.tags__item(href='/blog/tag/Проказа') Проказа
+				a.tags__item(href='/blog/tag/Салаты+') Салаты 
+				a.tags__item(href='/blog/tag/Сатурн') Сатурн
+				a.tags__item(href='/blog/tag/Сахар') Сахар
+				a.tags__item(href='/blog/tag/Солнце') Солнце
+				a.tags__item(href='/blog/tag/Супы') Супы
+				a.tags__item(href='/blog/tag/Тамаринд') Тамаринд
+				a.tags__item(href='/blog/tag/чакры') чакры
+				a.tags__item(href='/blog/tag/Юпитер') Юпитер
+
+		.layout__content
+			.blog-wrap
+				.blog-wrap__top
+					-
+						var breadcrumbs=[
+							{href:'/',name:'Главная'},
+							{href:'#',name:'Блог'},
+						];
+
+					+breadcrumbs(breadcrumbs)
+
+					.pagination
+						a(href="#").pagination__arr
+							+svg('ic-arrow-prev','ic-arrow-prev', '5', '10')
+						a(href="#").pagination__item 1
+						a(href="#").pagination__item.current 2
+						a(href="#").pagination__item 3
+						a(href="#").pagination__item 4
+						span.pagination__more ...
+						a(href="#").pagination__item 8
+						a(href="#").pagination__item 9
+						a(href="#").pagination__item 10
+						a(href="#").pagination__arr
+							+svg('ic-arrow-next','ic-arrow-prev', '5', '10')
+				
+				.blog-list
+					-
+						var list=[
+							{img:'blog1.jpg', title:'Почему Bharat Bazaar — марка отборных специй? Интервью с Амирасом Залавадиа', date:'03.07.2018 ', count:'8293', text:'Мы сами обожаем специи, используем их и давно работаем с поставщиками индийских пряностей. Марка Bharat Bazar в свое время стала открытием для нас: бадьян - звездочка к звездочке или зерна кардамона, зелень которых убедительнее слов говорит об их свежести или аромат куркумы. Встреча с главой компании Джитендаром Пателем расставила все по своим местам - философия стремления дать людям лучшее, настоящее не допускает компромисcов. Это и определяет качество каждой упаковки Bharat Bazar. Вот почему марка стала основным поставщиком пряностей и индийских продуктов Аюрведамаркет.'},
+							{img:'blog2.jpg', title:'Гид по аюрведическим маслам', date:'20.03.2018', count:'6029', text:'Возможно, ни в одной другой традиции масла не применяются настолько разнообразно и глубоко как в Аюрведе. Использование масел включают в себя ежедневный профилактический комплекс Диначарья (целебный режим дня) и терапевтические процедуры Панчакармы (глубокое очищение организма); на масляных основах создаются классические лечебные препараты (Ану, Шадбинду, Кшара тайлам) и линии косметических средств (Кумкумади, Амла, Ним).'},
+							{img:'blog3.jpg', title:'5 специй для улучшения пищеварения', date:'24.01.2018 ', count:'17928', text:'Если вы когда-либо путешествовали по Индии, то вы могли заметить, как местные жители после приёма пищи употребляют щепотку смеси пяти специй. Тарелку с цельными семенами фенхеля можно также увидеть на выходе из большинства традиционных индийских ресторанов. В чём же секрет?.. '},
+							{img:'blog4.jpg', title:'Аюрведические формулы «AYUR PLUS»', date:'24.01.2018', count:'6491', text:'Знакомим с маркой, которая всё прочнее занимает нишу качественной доступной Аюрведы на российском рынке. Компания, тщательно следящая за производством и сертификацией любых своих продуктов, будь то косметика, средства для волос или знаменитые аюрведические целебные формулы. Все рецептуры AYUR PLUS и методики их изготовления официально утверждены Министерством AYUSH, а за контролем качества продукции следят квалифицированные аюрведические врачи. Подробнее о производстве, особенностях и миссии компании.'},
+							{img:'blog5.jpg', title:'AMSARVEDA. СВОИМИ ГЛАЗАМИ. Аюрведический косметолог, автор популярного блога Анна Жижина о поездке в AMSAR.', date:'13.11.2017', count:'7299', text:'«Само производство, где окончательно смешиваются все ингредиенты, находится в совершенно стерильном помещении, куда доступ закрыт. Именно такой высокий стандарт санитарных норм позволяет гарантировать срок годности до 3-х лет. Однако, кроме этого цеха мне удалось увидеть и сфотографировать еще много интересного».'},
+							{img:'blog6.jpg', title:'Готовим полезные сладости: ЦУКАТЫ ИЗ ИМБИРЯ', date:'24.10.2017', count:'5225', text:'Аюрведа считает имбирь лучшим природным средством лечения простуды. Попробуйте этот простой рецепт вкусных имбирных цукатов, которые сможет приготовить даже ребенок! Такая сладость, благодаря согревающим и антисептическим свойствам имбиря, доставит вам не только удовольствие, но будет отличной профилактикой простуды, поможет при кашле и бронхите.'},
+						]
+
+					each item in list
+						.blog-list__item
+							a(href="#").blog-list__img(style="background-image: url(/assets/img/"+item.img+")")
+
+							.blog-list__content
+								.blog-list__main
+									.blog-list__title
+										a(href="#")= item.title
+
+									.blog-list__info
+										span.blog-list__date= item.date
+										span.blog-list__count= item.count
+
+									.blog-list__text= item.text
+
+								.blog-list__bottom
+									a(href="#").btn.btn_border.btn_big Читать далее
+
+				.blog-wrap__bottom
+					.pagination
+						a(href="#").pagination__arr
+							+svg('ic-arrow-prev','ic-arrow-prev', '5', '10')
+						a(href="#").pagination__item 1
+						a(href="#").pagination__item.current 2
+						a(href="#").pagination__item 3
+						a(href="#").pagination__item 4
+						span.pagination__more ...
+						a(href="#").pagination__item 8
+						a(href="#").pagination__item 9
+						a(href="#").pagination__item 10
+						a(href="#").pagination__arr
+							+svg('ic-arrow-next','ic-arrow-prev', '5', '10')

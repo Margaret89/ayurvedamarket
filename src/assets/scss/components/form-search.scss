@@ -45,9 +45,23 @@
 	}
 
 	button .icon{fill: #fff;}
-
+	
 	input[type="submit"]:hover,
 	button:hover{
 		background: $color-dark-orange;
+	}
+	
+	&_grey{
+		input[type="submit"],
+		button{
+			background: #f0f0f0;
+		}
+
+		input[type="submit"]:hover,
+		button:hover{
+			background: #d4d3d3;
+		}
+
+		button .icon{fill: #b4b4b4;}
 	}
 }

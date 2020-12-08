@@ -1,0 +1,75 @@
+/*-------------- blog-slider -----------------*/
+.blog-slider-wrap{
+	position: relative;
+	padding: 0 58px 0 40px;
+	height: 220px;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+
+	&__sticker{
+		display: block;
+		height: 40px;
+		width: 220px;
+		background: $color-orange;
+		@include font(normal, normal, rem(24px), rem(40px), #fff);
+		text-align: center;
+		text-transform: uppercase;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform-origin: 0 0;
+		transform: rotate(270deg) translateX(-100%);
+		z-index: 2;
+	}
+}
+
+.blog-slider{
+	display: none;
+
+	&.slick-initialized{display: block;}
+
+	&__item{
+		padding: 0 10px;
+		font-family: $font-helvetica;
+	}
+
+	&__img{
+		display: block;
+		height: 130px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-decoration: none;
+	}
+
+	&__content{padding: 5px;}
+
+	&__title{
+		@include font(normal, normal, rem(18px), 1.2, #c29a74);
+
+		a{text-decoration: none;}
+	}
+
+	&__title:hover a{text-decoration: underline;}
+
+	&__text{
+		@include font(normal, normal, rem(13px), 1.4, #a8a8a8);
+		margin-top: 3px;
+	}
+
+	.slick-prev{display: none!important;}
+
+	.slick-next{
+		display: inline-block;
+		width: 23px;
+		height: 175px;
+		background: transparent url(/assets/img/blog-slider-arrow.png) no-repeat top right;
+		font-size: 0;
+		position: absolute;
+		top: 22px;
+		right: -42px;
+		cursor: pointer;
+	}
+
+	.slick-next:hover{background-position: bottom right;}
+}

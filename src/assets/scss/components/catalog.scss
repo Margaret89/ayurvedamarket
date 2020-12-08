@@ -1,27 +1,6 @@
 /*-------------- catalog -----------------*/
-.catalog{
-	display: flex;
-	justify-content: space-between;
-
-	&__left{
-		width: 237px;
-		border-right: 1px solid #ddd;
-		padding: 40px 10px 30px 20px;
-	}
-
-	&__content{width: 100%;}
-
-	&__left + &__content{width: calc(100% - 237px);}
-}
-
 .catalog-menu{
 	font-family: $font-helvetica;
-
-	&__title{
-		@include font(normal, 300, rem(18px), 1.2, $color-orange);
-		text-transform: uppercase;
-		margin-bottom: 5px;
-	}
 
 	&__list,
 	&__item{
@@ -34,7 +13,6 @@
 		text-decoration: none;
 	}
 
-	&__list{margin-bottom: 30px;}
 	&__item{padding: 4px 0;}
 	&__link{cursor: pointer;}
 	&__link:hover{text-decoration: underline;}

@@ -32,6 +32,16 @@ if($('.js-cat-slider').length){
 	});
 }
 
+// Слайдер блога
+if($('.js-blog-slider').length){
+	$('.js-blog-slider').slick({
+		infinite: true,
+		dots: false,
+		slidesToShow: 4,
+		slidesToScroll: 4
+	});
+}
+
 // Слайдер товаров
 if($('.js-slider-product').length){
 	$('.js-slider-product').slick({
