@@ -92,3 +92,63 @@
 		.btn{min-width: 172px;}
 	}
 }
+
+.blog-detail{
+	padding: 12px;
+	font-family: $font-helvetica;
+
+	.breadcrumb{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&__head{
+		@include font(normal, 300, rem(21px), 1.2, #c29a74);
+		margin-bottom: 0;
+	}
+
+	&__info{
+		display: flex;
+		@include font(normal, 300, rem(14px), 1.2, #b1b1b0);
+	}
+
+	&__count{
+		margin-left: 14px;
+		padding-left: 25px;
+		position: relative;
+	}
+
+	&__count::before{
+		content: '';
+		display: inline-block;
+		width: 21px;
+		height: 12px;
+		background: url(/assets/img/blog-views-count.png) no-repeat center;
+		position: absolute;
+		@include top-center;
+		left: 0;
+	}
+
+	&__img{margin: 12px 0 16px;}
+
+	&__content{
+		@include font(normal, normal, rem(16px), 1.2, #696969);
+		text-align: justify;
+
+		p{margin-bottom: 25px;}
+	}
+
+	&__tag,
+	&__social{
+		h4,.h4{margin-bottom: 0;}
+	}
+
+	&__other{
+		h3,.h3{
+			font-size: rem(20px);
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+}
