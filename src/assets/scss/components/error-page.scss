@@ -1,0 +1,53 @@
+/*-------------- error-page -----------------*/
+.error-page{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	font-family: $font-helvetica;
+	@include font(normal, 300, rem(16px), 1.2, #7a6d65);
+	text-align: center;
+	background: url(/assets/img/404pagephoto.png) no-repeat top center;
+	background-size: cover;
+	padding: 20px;
+
+	&__title{
+		@include font(normal, 300, rem(24px), 1.2, #b39475);
+		margin-bottom: 17px;
+		margin-top: 0;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(16px), 1.2, #7a6d65);
+		margin-bottom: 14px;
+
+		p:last-child{margin-bottom: 0;}
+	}
+
+	&__note{
+		@include font(normal, 300, rem(16px), 1.2, #7a6d65);
+		margin-top: 17px;
+	}
+
+	.form-search{
+		height: rem(28px);
+		width: auto;
+
+		input[type="text"]{
+			width: 282px;
+			line-height: rem(26px);
+			border-radius: 0;
+			border-color: #7a6d65;
+		}
+
+		input[type="submit"],
+		button{
+			width: auto;
+			@include font(normal, 300, rem(14px), rem(28px), #fff);
+			text-transform: uppercase;
+			border-radius: 0;
+			padding: 0 7px;
+		}
+	}
+}

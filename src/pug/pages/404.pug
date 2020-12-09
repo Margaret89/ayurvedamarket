@@ -1,0 +1,19 @@
+//- extends ../layout/main
+
+block variables
+	- var title = '404';
+
+block content
+	section.error-page
+		.error-page__content
+			h2.error-page__title Страницы, которую вы искали, нет на нашем сайте.
+
+			.error-page__text
+				p Возможно вы ввели неправильный адрес или страница была удалена.
+				p Попробуйте поиск товаров
+
+			form.form-search(action='/search' accept-charset='UTF-8' method='get')
+				input(name='q' type='text')
+				button(type='submit') Поиск
+
+			.error-page__note Вернуться <a href="/">на главную</a> или почитать <a href="https://ayurvedamarket.ru/blog">блог</a>
