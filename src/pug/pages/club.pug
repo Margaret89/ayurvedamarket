@@ -17,11 +17,11 @@ block content
 					.club-form__field
 						input(type="email", placeholder='Email')
 
-				button(type='submit') Присоединиться
+					button(type='submit') Присоединиться
 		
 			.form-polit
 				input(type="checkbox", id="polit")
-				.form-polit__label(for="polit") Подтверждаю свое согласие на <a href="#">обработку персональных данных</a>. 
+				label.form-polit__label(for="polit") Подтверждаю свое согласие на <a href="#">обработку персональных данных</a>. 
 
 		
 		.club-list
@@ -34,4 +34,46 @@ block content
 				]
 			
 			each item in list
-				.club-list__
+				.club-list__item(class=item.color?'club-list__item_'+item.color:'')
+					.club-list__title= item.title
+					.club-list__text= item.text
+					a(href=item.link).club-list__link= item.link_text
+
+		.club-slider-wrap
+			.club-slider.js-club-slider
+				-
+					var list=[
+						'club_slider1.jpg',
+						'club_slider2.jpg',
+						'club_slider3.jpg',
+						'club_slider4.jpg',
+						'club_slider5.jpg',
+						'club_slider6.jpg',
+						'club_slider7.jpg',
+						'club_slider8.jpg',
+						'club_slider9.jpg',
+						'club_slider10.jpg',
+						'club_slider11.jpg',
+						'club_slider12.jpg',
+						'club_slider13.jpg',
+					]
+
+				each item in list
+					.club-slider__item
+						img(src="/assets/img/"+item, alt="")
+		
+			.club-slider-play.js-club-slider-play
+			.club-slider-pause.active.js-club-slider-pause
+
+		.club-list
+			-
+				var list=[
+					{color:'purple', title:'Распродажи', text:'Участвуйте в закрытых распродажах и акциях крупнейшего аюрведического интернет-магазина в Рунете Ayurvedamarket.ru', link:'javascript:void(0)', link_text:'Мне интересно'},
+					{color:'pink', title:'Скидки', text:'Получайте скидки постоянных покупателей в Программе лояльности Ayurvedamarket.ru, которой пользуются тысячи наших клиентов.', link:'https://ayurvedamarket.ru/about_us/17963', link_text:'Узнать больше'},
+				]
+			
+			each item in list
+				.club-list__item(class=item.color?'club-list__item_'+item.color:'')
+					.club-list__title= item.title
+					.club-list__text= item.text
+					a(href=item.link).club-list__link= item.link_text

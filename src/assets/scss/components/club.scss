@@ -1,4 +1,273 @@
 /*-------------- club -----------------*/
 .club{
-	
+	&__top{margin-bottom: 10px;}
+}
+
+.club-form{
+	&__main{
+		padding: 20px;
+		background: url(/assets/img/bg-club-form.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+	&__content{
+		width: 342px;
+		margin: 0 auto;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		display: inline-block;
+		height: rem(30px);
+		width: 100%;
+		font-family: Arial;
+		@include font(normal, normal, rem(16px), rem(28px), #fff);
+		text-align: center;
+		padding: 0 10px;
+		margin: 0;
+		border: solid 1px transparent;
+		outline: 0;
+		background: rgba(255,255,255,0.3);
+		transition: all 0.2s ease 0s;
+	}
+
+	textarea{
+		height: rem(94px);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder,
+	input[type="text"]::-webkit-input-placeholder,
+	input[type="email"]::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder,
+	input[type="text"]:-moz-placeholder,
+	input[type="email"]:-moz-placeholder,
+	textarea:-moz-placeholder{
+		text-transform: uppercase;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+		border-color: $color-orange;
+	}
+
+	&__field{margin-bottom: 10px;}
+
+	input[type="submit"],
+	button{
+		display: inline-block;
+		height: 30px;
+		width: 100%;
+		background: rgba(255,255,255,0.1);
+		border: 0;
+		@include font(normal, normal, rem(17px), rem(28px), #fff);
+		text-transform: uppercase;
+		text-decoration: none;
+		white-space: nowrap;
+		padding: 0 10px;
+		text-align: center;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+	}
+
+	input[type="submit"]:hover,
+	button:hover{
+		background: rgba(255,255,255,0.3);
+	}
+
+	.form-polit{margin-top: 10px;}
+}
+
+.club-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px 0;
+
+	&__item{
+		width: 50%;
+		margin-bottom: 10px;
+		padding: 60px 50px 70px 110px;
+		position: relative;
+		border: 1px solid #ddd;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 38px;
+		height: 100%;
+		background: url(/assets/img/pattern-blue.jpg) no-repeat 0 0;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__item_green::before{background-image: url(/assets/img/pattern-green.jpg);}
+	&__item_yellow::before{background-image: url(/assets/img/pattern-yellow.jpg);}
+	&__item_red::before{background-image: url(/assets/img/pattern-red.jpg);}
+	&__item_purple::before{background-image: url(/assets/img/pattern-purple.jpg);}
+	&__item_pink::before{background-image: url(/assets/img/pattern-pink.jpg);}
+
+	&__title{
+		display: inline-block;
+		vertical-align: top;
+		@include font(normal, 300, rem(52px), 1.2, $color-text);
+		position: relative;
+	}
+
+	&__title::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background:$color-text;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(25px), 1.15, $color-text);
+		margin-top: 33px;
+	}
+
+	&__link{
+		display: inline-block;
+		vertical-align: top;
+		font-family: $font-helvetica;
+		@include font(normal, 300, rem(20px), 1.2, #939598);
+		margin-top: 45px;
+	}
+}
+
+.club-slider-wrap{
+	padding: 10px 10px 55px;
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.club-slider{
+	display: none;
+
+	&.slick-initialized{display: block;}
+
+	.slick-arrow{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		font-size: 0;
+		border: 0;
+		outline: 0;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+		position: absolute;
+		bottom: -25px;
+		opacity: 0.5;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+	}
+
+	.slick-prev{
+		background: transparent url(/assets/img/ic-arrow-prev.svg) no-repeat center;
+		left: 30px;
+	}
+
+	.slick-next{
+		background: transparent url(/assets/img/ic-arrow-next.svg) no-repeat center;
+		left: 55px;
+	}
+
+	.slick-arrow:hover{opacity: 1;}
+
+	.slick-dots{
+		display: flex;
+		flex-wrap: wrap;
+		max-width: calc(100% - 100px);
+		position: absolute;
+		bottom: -18px;
+		right: -7px;
+
+		&,
+		li{
+			@include reset-list;
+		}
+
+		button{
+			display: inline-block;
+			width: 20px;
+			height: 7px;
+			background: #dcd9d9;
+			font-size: 0;
+			border: 0;
+			outline: 0;
+			box-shadow: none;
+			margin: 0 7px;
+			transition: all 0.2s ease 0s;
+			cursor: pointer;
+		}
+
+		.slick-active button,
+		button:hover{
+			background: $color-orange;
+		}
+	}
+}
+
+.club-slider-play,
+.club-slider-pause{
+	display: none;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	bottom: 30px;
+	left: 10px;
+	opacity: 0.5;
+	transition: all 0.2s ease 0s;
+	cursor: pointer;
+}
+
+.club-slider-play.active,
+.club-slider-pause.active{
+	display: inline-block;
+}
+
+.club-slider-play::after{
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 0 6px 6px;
+	border-color: transparent transparent transparent #565656;
+	position: absolute;
+	@include top-center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.club-slider-pause::before,
+.club-slider-pause::after{
+	content: '';
+	display: inline-block;
+	width: 3px;
+	height: 12px;
+	background: #565656;
+	position: absolute;
+	@include top-center;
+}
+
+.club-slider-pause::before{left: 5px;}
+.club-slider-pause::after{right: 5px;}
+
+.club-slider-play:hover,
+.club-slider-pause:hover{
+	opacity: 1;
 }
