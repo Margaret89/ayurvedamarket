@@ -1,0 +1,181 @@
+/*-------------- basket -----------------*/
+.basket{
+	&__content{
+		max-width: 740px;
+		margin: 0 auto;
+		padding: 20px;
+		font-family: $font-helvetica;
+	}
+
+	&__title{
+		@include font(normal, normal, rem(20px), 1.2, #3f3d1d);
+		margin-bottom: 11px;
+	}
+
+	&__bottom{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 20px;
+
+		.coupon{margin: 20px;}
+	}
+}
+
+.basket-table{
+	width: 100%;
+	text-align: center;
+
+	td{
+		vertical-align: middle;
+		padding: 7px 10px;
+	}
+
+	th{
+		font-family: Aial;
+		@include font(normal, normal, rem(13px), 1.2, #939598);
+		padding: 10px;
+	}
+
+	td, th{text-align: center;}
+
+	th.basket-table__head-name,
+	td.basket-table__info{
+		text-align: left;
+	}
+
+	td:first-child{padding-left: 0;}
+
+	td:last-child,
+	th:last-child{
+		padding-right: 0;
+	}
+
+	&__head-del{width: 22px; }
+	&__head-sum{width: 100px;}
+	&__head-price{width: 120px;}
+	&__head-count{width: 90px;}
+
+	&__head{border-bottom: 1px solid #ddd;}
+
+	&__info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-align: left;
+	}
+
+	&__img{
+		display: block;
+		width: 100px;
+		height: 100px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		text-decoration: none;
+	}
+
+	&__title,
+	&__title a{
+		@include font(normal, 300, rem(16px), 1.2, #231F20);
+		text-decoration: none;
+	}
+
+	&__title{width: calc(100% - 105px);}
+	&__title a:hover{text-decoration: underline;}
+
+	&__price{
+		@include font(normal, 500, rem(14px), 1.2, #5c4621);
+	}
+
+	&__sum{
+		@include font(normal, 500, rem(14px), 1.2, $color-orange);
+	}
+
+	&__del{
+		.icon{
+			fill: #ababab;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&__del:hover .icon{fill: $color-orange;}
+
+	&__footer{
+		font-family: Arial;
+		@include font(normal, normal, rem(21px), 1.2, #5c4621);
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		text-align: right;
+
+		td{text-align: right;}
+	}
+
+	&__currency{font-size: rem(14px);}
+}
+
+.counter{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+
+	&__minus,
+	&__plus{
+		display: inline-block;
+		width: 12px;
+		height: 100%;
+		@include font(normal, normal, rem(24px), 1, #808080);
+		margin: 0 4px;
+		cursor: pointer;
+	}
+
+	&__minus:hover,
+	&__plus:hover{
+		color: $color-orange;
+	}
+
+	&__field{
+		width: 30px;
+		height: 100%;
+		outline: none;
+		border: 1px solid #ccc;
+		border-radius: 0;
+		@include font(normal, bold, rem(16px), 28px, #111);
+		text-align: center;
+		padding: 0 2px;
+		background: transparent;
+	}
+}
+
+.coupon{
+	display: inline-flex;
+	align-items: center;
+
+	&__label{
+		@include font(normal, 300, rem(14px), 1.2, #5c4621);
+		margin-right: 7px;
+	}
+
+	input[type="text"]{
+		display: inline-block;
+		height: rem(30px);
+		width: 184px;
+		font-family: Arial;
+		@include font(normal, normal, rem(13px), rem(28px), #222);
+		padding: 0 8px;
+		margin: 0;
+		border: solid 1px #c1c9cb;
+		outline: 0;
+		background: #fff;
+		transition: all 0.2s ease 0s;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="text"]::-webkit-input-placeholder,
+	input[type="text"]:-moz-placeholder{
+		color: #929292;
+	}
+
+	input[type="text"]:focus{border-color: $color-orange;}
+}
