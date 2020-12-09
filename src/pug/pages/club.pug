@@ -1,0 +1,37 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Клуб';
+
+block content
+	section.club
+		.club__top
+			img(src="/assets/img/banner_club2.jpg", alt="")
+
+		form.club-form
+			.club-form__main
+				.club-form__content
+					.club-form__field
+						input(type="text", placeholder='Имя')
+
+					.club-form__field
+						input(type="email", placeholder='Email')
+
+				button(type='submit') Присоединиться
+		
+			.form-polit
+				input(type="checkbox", id="polit")
+				.form-polit__label(for="polit") Подтверждаю свое согласие на <a href="#">обработку персональных данных</a>. 
+
+		
+		.club-list
+			-
+				var list=[
+					{title:'Информация', text:'Полезные материалы и уникальный видео-контент в наших рассылках и крупнейшем аюрведическом сообществе ВКонтакте', link:'vk.com/all_ayurveda', link_text:'vk.com/all_ayurveda'},
+					{color:'green', title:'Образование', text:'Семинары и вебинары с лучшими по аюрведе в рамках образовательной программы проекта «Вся Аюрведа»'},
+					{color:'yellow', title:'Мероприятия', text:'Клубные встречи, мастер-классы, лекции, а так же информация обо всех аюрведических событиях в Росии - вы сможете быть в урсе всех новостей первыми', link:'https://ayurvedamarket.ru/club/#club_activity_form_id', link_text:'Записаться на ближайшее мероприятие '},
+					{color:'red', title:'Партнеры', text:'Пользуйтесь аюрведичесими услугами, занимайтесь йогой, заглядывайте в кафе здорового питания - получайте скидки и специальные условия у наших партнеров'},
+				]
+			
+			each item in list
+				.club-list__
