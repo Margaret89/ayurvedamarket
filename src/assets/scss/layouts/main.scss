@@ -114,6 +114,7 @@ button.btn{
 	white-space: nowrap;
 	padding: 0 10px;
 	text-align: center;
+	transition: all 0.3s ease 0s;
 	cursor: pointer;
 }
 
@@ -196,6 +197,34 @@ button.btn_big{
 	line-height: rem(40px);
 	padding: 0 20px;
 }
+
+.btn-shadow,
+input[type="submit"].btn-shadow,
+button.btn-shadow{
+	display: inline-block;
+	height: 38px;
+	min-width: 215px;
+	background: #98ef00;
+	border: 0;
+	font-family: $font-helvetica;
+	@include font(normal, 300, rem(19px), 38px, #fff);
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 0 10px;
+	text-align: center;
+	box-shadow: -2px 3px 0px #c4c4c4;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+
+.btn-shadow:hover,
+input[type="submit"].btn-shadow:hover,
+button.btn-shadow:hover{
+	background: #7fc703;
+	box-shadow: none;
+}
+
 
 .code{
 	background-color: #f7f7f7;
