@@ -39,7 +39,7 @@
 
 	td, th{text-align: center;}
 
-	th.basket-table__head-name,
+	th.basket-table__col-name,
 	td.basket-table__info{
 		text-align: left;
 	}
@@ -51,10 +51,10 @@
 		padding-right: 0;
 	}
 
-	&__head-del{width: 22px; }
-	&__head-sum{width: 100px;}
-	&__head-price{width: 120px;}
-	&__head-count{width: 90px;}
+	&__col-del{width: 22px; }
+	&__col-sum{width: 100px;}
+	&__col-price{width: 120px;}
+	&__col-count{width: 90px;}
 
 	&__head{border-bottom: 1px solid #ddd;}
 
@@ -178,4 +178,85 @@
 	}
 
 	input[type="text"]:focus{border-color: $color-orange;}
+}
+
+@media (max-width: 767px) {
+	.basket-table{
+		text-align: left;
+
+		td, th{text-align: left;}
+
+		&,
+		tbody,
+		tr,
+		td,
+		tfoot{
+			display: block;
+		}
+
+		tr.basket-table__head,
+		thead{
+			display: none;
+		}
+
+		tr.basket-table__item{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		td{
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__col-name{width: 100%;}
+
+		&__col-del,
+		&__col-sum,
+		&__col-price,
+		&__col-count{
+			width: 50%;
+		}
+
+		td.basket-table__col-del,
+		td.basket-table__col-count{
+			text-align: right;
+		}
+
+		&__del{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+
+			.icon{
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		&__label{
+			@include font(normal, 500, rem(14px), 1.2, $color-text);
+		}
+
+		&__item:not(:last-child){
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 15px;
+			margin-bottom: 20px;
+		}
+
+		&__footer{margin-top: 30px;}
+	}
+
+	.basket{
+		&__bottom{display: block;}
+
+		.coupon{
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.coupon{display: block;}
 }
