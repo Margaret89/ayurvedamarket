@@ -29,3 +29,10 @@
 	margin-top: 30px;
 	margin-bottom: 5px;
 }
+
+@media (max-width: 767px) {
+	.layout{
+		&__left{display: none;}
+		&__left + &__content{width: 100%;}
+	}
+}

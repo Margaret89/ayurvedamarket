@@ -62,3 +62,9 @@
 
 	.slick-next:hover{background-position: bottom right;}
 }
+
+@media (max-width: 1100px) {
+	.cat-slider{
+		&__text{font-size: rem(18px);}
+	}
+}
