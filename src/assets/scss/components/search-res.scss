@@ -22,3 +22,22 @@
 
 	.catalog-sort{padding: 17px 0 8px;}
 }
+
+@media (max-width: 767px) {
+	.search-res{
+		padding-left: 15px;
+		padding-right: 15px;
+
+		.catalog-list{
+			margin-left: 0;
+			margin-right: 0;
+
+			&_row .catalog-list__item{flex-direction: column;}
+
+			&_row .catalog-list__bottom{
+				text-align: left;
+				padding-left: 130px;
+			}
+		}
+	}
+}
