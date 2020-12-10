@@ -12,6 +12,7 @@
 
 	&__content{
 		width: 342px;
+		max-width: 100%;
 		margin: 0 auto;
 	}
 
@@ -80,7 +81,11 @@
 		background: rgba(255,255,255,0.3);
 	}
 
-	.form-polit{margin-top: 10px;}
+	.form-polit{
+		margin-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .club-list{
@@ -189,9 +194,10 @@
 	.slick-dots{
 		display: flex;
 		flex-wrap: wrap;
-		max-width: calc(100% - 100px);
+		max-width: calc(100% - 90px);
+		margin-top: 18px;
 		position: absolute;
-		bottom: -18px;
+		top: 100%;
 		right: -7px;
 
 		&,
@@ -270,4 +276,43 @@
 .club-slider-play:hover,
 .club-slider-pause:hover{
 	opacity: 1;
+}
+
+@media (max-width: 1100px) {
+	.club-list{
+		&__item{padding: 60px 30px 70px 70px;}
+		&__title{font-size: rem(42px);}
+		&__text{font-size: rem(21px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.club-form{
+		&__main{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.club-list{
+		display: block;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&__item{
+			width: 100%;
+			padding: 30px 15px 30px 50px
+		}
+
+		&__title{font-size: rem(34px);}
+
+		&__text,
+		&__link{
+			font-size: rem(18px);
+		}
+	}
+
+	.club-slider-wrap{
+		margin: 0 15px;
+	}
 }
