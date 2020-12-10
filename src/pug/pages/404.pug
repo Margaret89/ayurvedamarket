@@ -1,19 +1,23 @@
 //- extends ../layout/main
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title '404'
 
-block variables
-	- var title = '404';
+	body.js-body
+		.wrapper
+			section.error-page
+				.error-page__content
+					h2.error-page__title Страницы, которую вы искали, нет на нашем сайте.
 
-block content
-	section.error-page
-		.error-page__content
-			h2.error-page__title Страницы, которую вы искали, нет на нашем сайте.
+					.error-page__text
+						p Возможно вы ввели неправильный адрес или страница была удалена.
+						p Попробуйте поиск товаров
 
-			.error-page__text
-				p Возможно вы ввели неправильный адрес или страница была удалена.
-				p Попробуйте поиск товаров
+					form.form-search(action='/search' accept-charset='UTF-8' method='get')
+						input(name='q' type='text')
+						button(type='submit') Поиск
 
-			form.form-search(action='/search' accept-charset='UTF-8' method='get')
-				input(name='q' type='text')
-				button(type='submit') Поиск
-
-			.error-page__note Вернуться <a href="/">на главную</a> или почитать <a href="https://ayurvedamarket.ru/blog">блог</a>
+					.error-page__note Вернуться <a href="/">на главную</a> или почитать <a href="https://ayurvedamarket.ru/blog">блог</a>

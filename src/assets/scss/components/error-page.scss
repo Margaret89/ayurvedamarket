@@ -51,3 +51,9 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.error-page{
+		.form-search input[type="text"]{width: 220px;}
+	}
+}
