@@ -71,3 +71,46 @@
 
 	&__label{font-weight: bold;}
 }
+
+@media (max-width: 1100px) {
+	.training{
+		&__img{width: 250px;}
+		&__content{width: calc(100% - 260px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.training{
+		&__item{
+			display: block;
+			padding: 15px;
+		}
+
+		&__img{
+			width: 100px;
+			margin-bottom: 15px;
+		}
+
+		&__content{
+			width: 100%;
+			padding: 15px 0;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.training{
+		&__bottom{display: block;}
+	}
+
+	.training-param{
+		display: block;
+
+		&__col{width: 100%;}
+	}
+
+	.training-price{
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+}
