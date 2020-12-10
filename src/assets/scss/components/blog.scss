@@ -153,6 +153,12 @@
 	}
 }
 
+@media (max-width: 1100px) {
+	.blog-list{
+		&__img{height: 165px;}
+	}
+}
+
 @media (max-width: 767px) {
 	.blog-wrap{
 		padding-left: 15px;
@@ -178,6 +184,9 @@
 			margin-right: 0;
 		}
 
-		&__img{background-size: contain;}
+		&__img{
+			height: 220px;
+			background-size: contain;
+		}
 	}
 }
