@@ -23,3 +23,10 @@
 	
 	&__link{color: $color-blue;}
 }
+
+@media (max-width: 767px) {
+	.breadcrumb{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
