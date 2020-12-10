@@ -31,7 +31,7 @@
 	textarea{
 		display: inline-block;
 		height: rem(30px);
-		width: calc(100% - 40px);
+		width: 100%;
 		font-family: Arial;
 		@include font(normal, normal, rem(13px), rem(28px), #222);
 		padding: 0 8px;
@@ -101,5 +101,19 @@
 	&__label{
 		@include font(normal, normal, rem(12px), 1.2, #222);
 		margin-left: 5px;
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site{
+		padding-left: 0;
+		padding-right: 0;
+
+		&__field{display: block;}
+
+		&__label,
+		&__input{
+			width: 100%;
+		}
 	}
 }
