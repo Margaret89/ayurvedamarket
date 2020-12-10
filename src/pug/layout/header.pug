@@ -7,25 +7,35 @@ header.header
 			img(src="/assets/img/sticker-right.png", alt="")
 
 	.header-top
-		nav.top-menu
+		.ic-hamburger.js-ic-hamburger.d-lg-none
+			span
+
+		nav.top-menu.js-add-mm(data-order="1")
 			ul.top-menu__list
 				li.top-menu__item
-					a(href="/about_us/shipping").top-menu__link Доставка
+					a(href="/about_us/shipping").top-menu__link.js-menu-link
+						span.js-menu-text Доставка
 				li.top-menu__item
-					a(href="#").top-menu__link Для клиентов
+					a(href="#").top-menu__link.js-menu-link
+						span.js-menu-text Для клиентов
+						.top-menu__arr.js-menu-arr
+							+svg('ic-arrow-next','ic-arrow-next', '8', '15')
 
-					ul.top-menu__sub
+					ul.top-menu__sub.js-menu-sub
 						li.top-menu__item
-							a(href="/about_us/17963/").top-menu__link Программа скидок
+							a(href="/about_us/17963/").top-menu__link.js-menu-link
+								span.js-menu-text Программа скидок
 						li.top-menu__item
-							a(href="/about_us/19365/").top-menu__link Способы оплаты
+							a(href="/about_us/19365/").top-menu__link.js-menu-link
+								span.js-menu-text Способы оплаты
 						li.top-menu__item
-							a(href="/about_us/20889/").top-menu__link Ваши отзывы
+							a(href="/about_us/20889/").top-menu__link.js-menu-link
+								span.js-menu-text Ваши отзывы
 
 				li.top-menu__item
-					a(href="/about_us").top-menu__link О нас
+					a(href="/about_us").top-menu__link.js-menu-link О нас
 				li.top-menu__item
-					a(href="/about_us/19363").top-menu__link Контакты
+					a(href="/about_us/19363").top-menu__link.js-menu-link Контакты
 
 		a(href="/cabinet").header-top__profile Ваш кабинет
 
@@ -45,7 +55,7 @@ header.header
 
 			.header-main__slogan Крупнейший магазин Аюрведы
 				.header-main__sticker
-					img(src="data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' style='enable-background:new 0 0 100 100;' xml:space='preserve'%3e%3cstyle type='text/css'%3e .st0%7bfill:%2389B71A;%7d %3c/style%3e%3cg%3e%3cpath class='st0' d='M57.3,61.2c-0.2-1.2-0.6-1.5-1.5-1.4l-0.2,0c-0.9,0.2-1,0.6-0.8,1.8c0.2,2.6,0.5,5.4,0,7.5 c-0.2,0.7-0.5,1.3-0.9,1.7l3.5-0.6c1.1-0.2,1.4-0.6,1.2-1.8L57.3,61.2z'/%3e%3cpath class='st0' d='M68.3,63c-0.7,0.7-1.3,1.5-1,2.8c0.2,1.2,0.9,1.6,1.7,1.5c0.5-0.1,1-0.4,1.3-1.1l-0.8-4.5 C69.3,62.1,69,62.4,68.3,63z'/%3e%3cpath class='st0' d='M45.5,61.3c-1.2,0.2-1.8,2-1.1,5.9c0.7,3.9,1.8,5.4,3,5.1c1.2-0.2,1.8-2,1.1-5.9C47.8,62.5,46.7,61,45.5,61.3z '/%3e%3cpath class='st0' d='M64,45.1c1.8-0.3,2.1-3.2,1.3-8.1c-0.9-5.1-2.4-7.4-4.1-7.1C59.4,30.1,59,33,59.9,38 C60.8,43,62.3,45.4,64,45.1z'/%3e%3cpath class='st0' d='M49.8,47.6c1.8-0.3,2.1-3.2,1.3-8.1c-0.9-5.1-2.4-7.4-4.1-7.1c-1.8,0.3-2.1,3.2-1.3,8.1 C46.5,45.5,48,47.9,49.8,47.6z'/%3e%3cpath class='st0' d='M95.1,44.8c-1-1.2-1.1-2.3-0.6-3.7c0.6-1.5,1-3.1,1.6-4.5c0.5-1.2,0.2-1.9-0.8-2.6c-1.4-1-2.7-2-4.1-2.9 c-1.3-0.8-1.8-1.8-1.7-3.3c0.1-1.5,0-3,0.1-4.4c0.1-1.6-0.4-2.5-2.1-2.9c-1.6-0.3-3.1-0.9-4.6-1.3c-1.2-0.3-1.8-1-2.1-2.2 c-0.4-1.5-1-2.9-1.3-4.4c-0.3-1.7-1.2-2.6-2.9-2.2c-4.9,1-8.2-0.8-10.2-5.3C65.7,3.7,64.5,3.2,63,4C59,6.4,55.3,6.2,52,2.4 C51.6,1.9,50.9,1,50.4,1c-1.3,0-1.7,0.7-2.6,1.5c-1.3,1.2-2.8,2.1-4.1,3.1c-0.6,0.5-1.3,0.3-1.9,0c-1.6-0.6-3.3-1-4.9-1.7 c-1.5-0.6-2.4-0.1-3.2,1.1c-0.9,1.4-1.9,2.6-2.7,4c-0.6,1-1.4,1.5-2.7,1.4c-1.7-0.1-3.4,0-5-0.1c-1.4-0.1-2.4,0.4-2.6,1.9 c-0.5,5-3.1,7.8-8.2,8.3c-1.5,0.1-2.3,1.2-2,2.7c1,4.8-0.6,8.3-5.2,10.3c-1.5,0.7-1.9,1.9-1.2,3.5c0.3,0.7,0.4,1.4,0.8,2.1 c1.7,2.9,0.9,5.3-1.3,7.5c-0.8,0.8-2,1.5-2.3,2.6c-0.4,1.5,1,2.4,1.8,3.5c1,1.3,1.7,2.9,2.8,4.2c0.4,0.4,0.1,0.9-0.1,1.3 c-0.6,1.7-1.1,3.4-1.7,5.1c-0.6,1.5-0.2,2.4,1.1,3.2c1.3,0.8,2.5,1.8,3.8,2.6c1.2,0.7,1.6,1.7,1.5,3c-0.1,1.7-0.1,3.5-0.1,5.2 c0,1.1,0.5,1.8,1.5,2.1c1.5,0.4,2.9,1,4.4,1.3c1.8,0.4,2.6,1.4,3.1,3.2c2,7.3,0.8,5.8,7.6,5.7c2.3,0,3.5,0.9,4.7,2.6 c3.6,5.4,2.3,5,8.5,2.7c1.3-0.5,2.7-0.8,4-0.1c0.8,0.4,1.5,1.1,2.2,1.7c0.7,0.6,1.4,1,2,1.6c0.8,0.8,1.4,1.5,2.5,0.6 c0.5-0.4,1-1.1,1.5-1.5c1-0.9,2.1-1.6,3.4-2.1c2.7-0.9,5.5-0.2,7.8,1.3c0.9,0.6,1.8,0.1,2.4-0.8c1-1.4,2-2.8,3-4.3 c0.7-1.1,1.6-1.7,3-1.6c1.6,0.1,3.2,0.1,4.8,0.1c1.4,0.1,2.3-0.4,2.6-1.9c0.2-0.9,0.7-1.8,0.8-2.7c0.3-3,2.1-4.2,4.9-4.9 c5.6-1.4,4.7-1,4.4-5.8c-0.2-3.2,0.7-5.4,3.6-6.8c0.7-0.3,1.3-0.9,2-1.4c1.2-0.8,1.6-1.7,1-3.1c-0.1-0.2-0.1-0.5-0.2-0.8 c-0.7-1.9-1.6-4.1-1.1-6.1c0.4-1.5,1.5-2.7,2.6-3.7c0.7-0.7,2.4-1.8,1.6-3C98,48,96.5,46.3,95.1,44.8z M20.9,53.1 c-2.8,0.5-5.4-0.9-6.1-5c-0.7-3.9,1.2-6.4,4.3-7c1.1-0.2,2.2-0.1,2.9,0.2c0.8,0.3,1.4,1,1.6,1.8c0.2,1-0.4,1.9-1.4,2.1 c-1,0.2-1.8-0.3-2-1.3c-0.2-0.9,0.4-1.7,1.1-2c-0.3-0.3-0.8-0.4-1.4-0.3c-1.8,0.3-2.4,2.7-1.8,5.7c0.6,3.4,2.2,4.1,3.7,3.9 c0.8-0.1,1.9-0.7,2.5-2.3l0.4,0.1C24.4,50.6,23.4,52.6,20.9,53.1z M61.2,29.4c3.6-0.6,6.6,1.8,7.4,6.8c0.9,4.9-1.1,8.6-4.6,9.2 c-3.6,0.6-6.5-1.8-7.4-6.8C55.7,33.8,57.6,30,61.2,29.4z M46.9,31.9c3.6-0.6,6.6,1.8,7.4,6.8c0.9,4.9-1.1,8.6-4.6,9.2 c-3.6,0.6-6.5-1.8-7.4-6.8C41.4,36.3,43.4,32.5,46.9,31.9z M39,67c-1.1-2.9-2.1-3.8-3.4-3.6l-0.4,0.1c-0.7,0.1-0.9,0.5-0.7,1.5 l1.3,7.2c0.3,1.4,1.1,1.7,2.4,1.4l0.1,0.5c-0.8,0.1-2.3,0.3-3.8,0.6c-1.1,0.2-2.3,0.5-2.8,0.6l-0.1-0.5c1-0.2,1.3-0.6,1.1-1.8 l-1.3-7.2c-0.2-1.2-0.7-1.5-1.7-1.3l-0.1-0.5c0.6-0.1,1.8-0.2,2.9-0.4c1.1-0.2,2.2-0.5,2.8-0.6l3.4-0.6c0.1,1.3,0.3,2.5,0.4,3.1 c0.1,0.6,0.2,1.1,0.3,1.5L39,67z M35.6,50.2c-1.3,0.2-2.2,0.4-2.9,0.5c-0.4,0.1-0.8,0.1-1.1,0.2l-0.1-0.4c2.6-3.2,5.2-7.9,4.4-12.4 c-0.5-2.7-1.8-3.3-3.1-3.1c-0.7,0.1-1.4,0.6-1.7,1.2c0.9,0.1,1.6,0.6,1.7,1.4c0.2,1-0.5,1.7-1.4,1.9c-1,0.2-1.7-0.5-1.9-1.3 c-0.1-0.8,0.3-1.5,0.8-2.1c0.7-0.9,1.9-1.5,3.4-1.7c2.7-0.5,5,0.5,5.4,2.9c0.5,3.1-2.5,6-5.3,10.7l5.3-0.9c0.8-0.1,1.3-0.6,1.2-1.8 l0.5-0.1c0,0.3,0.1,0.8,0.2,1.2c0.1,0.6,0.3,1.7,0.6,2.7L35.6,50.2z M47.5,72.7c-3.1,0.6-5.6-0.7-6.4-5c-0.8-4.3,1.2-6.3,4.3-6.9 c3.1-0.6,5.6,0.7,6.4,5C52.6,70.2,50.7,72.2,47.5,72.7z M63.8,73.1c-0.9-2.5-1.7-3.3-3.7-2.9c-1.3,0.2-2.3,0.4-4.2,0.8 c-1.9,0.3-2.5,1.3-2.4,4l-0.5,0.1c0-0.3-0.1-0.8-0.2-1.4c-0.1-0.5-0.3-1.5-0.6-2.5l0.4-0.1c0.9-0.2,1.5-1,1.7-2 c0.5-2,0.2-4.8,0-7.4c0-0.1,0-0.2,0-0.2c-0.2-1.1-0.8-1.3-2-1.1l-0.1-0.5c0.2,0,0.8-0.1,1.5-0.2c0.6-0.1,1.2-0.3,2.1-0.4 c1.1-0.2,1.9-0.2,2.8-0.4c1-0.2,2.2-0.5,2.7-0.6l0.1,0.5c-0.9,0.2-1.2,0.6-1,1.8l1.3,7.2c0.2,1.2,0.7,1.5,2,1.3 c0.1,1,0.2,2,0.3,2.6c0.1,0.5,0.2,1,0.3,1.3L63.8,73.1z M72.8,68.1c-1.6,0.3-2.2-0.5-2.4-1.4c-0.5,1.4-1.7,2.1-2.9,2.3 c-1.6,0.3-2.9-0.4-3.2-2c-0.3-1.6,0.6-2.6,2.5-3.7c1.5-0.9,2.7-1.5,2.5-2.5L69,59.1c-0.2-1.1-0.8-1.9-2.1-1.6 c-0.5,0.1-1.1,0.4-1.5,0.8c0.8,0.1,1.4,0.6,1.6,1.5c0.2,0.9-0.4,1.7-1.5,1.9c-0.9,0.2-1.7-0.5-1.8-1.4c-0.1-0.8,0.3-1.5,0.9-2 c0.7-0.6,1.7-1.1,3.2-1.3c1.4-0.2,2.5-0.2,3.4,0.4c0.8,0.5,1,1.4,1.3,2.9l1,5.9c0.1,0.7,0.3,0.9,0.6,0.9c0.3-0.1,0.5-0.3,0.7-0.5 l0.3,0.3C74.6,67.5,73.9,67.9,72.8,68.1z M76.1,43.3c-1.4,0.2-2.5,0.1-3.3-0.2c-0.8-0.3-1.3-0.9-1.4-1.5c-0.2-0.9,0.3-1.6,1.4-1.8 c1-0.2,1.8,0.3,2,1.2c0.1,0.8-0.3,1.5-1,1.8c0.3,0.2,1,0.3,1.8,0.1c2.3-0.4,3.2-2.4,2.8-4.8c-0.4-2.2-1.7-3.5-3.5-3.4 c-0.3,0.3-0.5,0.5-0.9,0.6c-0.2,0-0.5,0-0.5-0.3c0-0.3,0.2-0.4,0.6-0.5c0.2,0,0.4,0,0.6,0c1.3-0.9,1.7-2.3,1.4-4 c-0.4-2-1.4-3-2.8-2.8c-0.7,0.1-1.4,0.5-1.7,1.1c0.9,0.1,1.6,0.6,1.7,1.4c0.2,1-0.5,1.7-1.4,1.9c-1,0.2-1.7-0.4-1.9-1.3 c-0.1-0.8,0.2-1.5,0.8-2.1c0.7-0.8,1.9-1.3,3.4-1.6c2.7-0.5,4.8,0.4,5.1,2.4c0.4,2.1-1.5,4-4,5c3-0.4,5.9,0.5,6.3,3.2 C82.1,40.5,79.4,42.7,76.1,43.3z'/%3e%3c/g%3e%3c/svg%3e", alt="")
+					img(src="/assets/img/sticker-year.svg", alt="")
 
 			.yandex-market-label
 				a(href='https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=73582/path=dynamic.88x31/*https://market.yandex.ru/shop--aiurveda-market/6941/reviews')
@@ -74,11 +84,15 @@ header.header
 
 	.header-nav
 		.header-nav__top
-			nav.main-menu
+			nav.main-menu.js-add-mm(data-order="2")
 				ul.main-menu__list
 					li.main-menu__item
-						a.main-menu__link(href='/food') Питание
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/food')
+							span.js-menu-text Питание
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/honey_and_tea')
 									| Русский мёд & Индийский чай 
@@ -135,9 +149,14 @@ header.header
 								a.main-menu-sub__link(href='/soma') Сома
 								a.main-menu-sub__link(href='/saharaja') Сахараджа
 								a.main-menu-sub__link(href='/umnaya_mama') Умная мама
+				
 					li.main-menu__item.item-active
-						a.main-menu__link(href='/zdorove') Здоровье
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/zdorove')
+							span.js-menu-text Здоровье
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/s_a')
 									| Средства аюрведы для зимы 
@@ -219,9 +238,14 @@ header.header
 								a.main-menu-sub__link(href='/kedr') Кедровый мир
 								a.main-menu-sub__link(href='/rus_med') Русский мёд
 								a.main-menu-sub__link(href='/russkie_blagovoniya') Русские благовония
+				
 					li.main-menu__item
-						a.main-menu__link(href='/kosmetika') Косметика
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/kosmetika')
+							span.js-menu-text Косметика
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/ayurvedicheskie-shampuni-kupit') Шампуни
 								a.main-menu-sub__link(href='/balm_conditioner') Бальзамы и кондиционеры
@@ -297,9 +321,14 @@ header.header
 								a.main-menu-sub__link(href='/Veda_Vedica') Veda Vedica
 								a.main-menu-sub__link(href='/Vedik_Essence') Vedik Essence
 								a.main-menu-sub__link(href='/dalpana') Dalpana
+					
 					li.main-menu__item
-						a.main-menu__link(href='/gifts') Подарки
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/gifts')
+							span.js-menu-text Подарки
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/presents')
 									| Подарки к новому году 
@@ -308,9 +337,14 @@ header.header
 								a.main-menu-sub__link(href='/interyer') Предметы интерьера
 								a.main-menu-sub__link(href='/kosmetic_set') Косметические наборы
 								a.main-menu-sub__link(href='/present_sertifikat') Подарочные сертификаты
+				
 					li.main-menu__item
-						a.main-menu__link(href='/knigi') Книги
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/knigi')
+							span.js-menu-text Книги
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/knigi-po-ayurvede-ayurvedicheskaya-literatura-kupi') Аюрведическая литература
 								a.main-menu-sub__link(href='/sanskrit')
@@ -318,17 +352,27 @@ header.header
 									sup.main-menu-sub__new new!
 								a.main-menu-sub__link(href='/knigi_yoga') Книги и журналы по йоге
 								a.main-menu-sub__link(href='/poleznye_knigi') Полезная литература
+					
 					li.main-menu__item
-						a.main-menu__link(href='/yoga') Йога
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/yoga')
+							span.js-menu-text Йога
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/knigi_po_yoge') Книги по йоге
 								a.main-menu-sub__link(href='/219') Предметы для йоги
 								a.main-menu-sub__link(href='/220') Одежда для йоги
 								a.main-menu-sub__link(href='/221') Аюрведические средства для йоги
+					
 					li.main-menu__item
-						a.main-menu__link(href='/procedury') Процедуры
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/procedury')
+							span.js-menu-text Процедуры
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/cons') Консультации
 								a.main-menu-sub__link(href='/ayurvedicheskie-procedury') Процедуры
@@ -341,29 +385,48 @@ header.header
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/157') Аюрведический центр "Керала"
 								a.main-menu-sub__link(href='/224') Аюрведические кабинеты
+					
 					li.main-menu__item
-						a.main-menu__link(href='/obuchenie') Обучение
-						.main-menu-sub
+						a.main-menu__link.js-menu-link(href='/obuchenie')
+							span.js-menu-text Обучение
+							.main-menu__arr.js-menu-arr
+								+svg('ic-arrow-next','ic-arrow-next', '8', '15')
+
+						.main-menu-sub.js-menu-sub
 							.main-menu-sub__item
 								a.main-menu-sub__link(href='/webinar_seminar') Вебинары и семинары
 								a.main-menu-sub__link(href='/programmy-obucheniya') Курсы и программы дистанционного обучения
 								a.main-menu-sub__link(href='/zapis_kurs') Записи курсов
 
 		.header-nav__bottom
-			nav.main-menu.main-menu_orange
+			nav.main-menu.main-menu_orange.js-add-mm(data-order="3")
 				ul.main-menu__list
 					li.main-menu__item
-						a.main-menu__link(href='/novinki') Новинки
+						a.main-menu__link.js-menu-link(href='/novinki')
+							span.js-menu-text Новинки
 					li.main-menu__item
-						a.main-menu__link(href='/hit') Топ средств
+						a.main-menu__link.js-menu-link(href='/hit')
+							span.js-menu-text Топ средств
 					li.main-menu__item
-						a.main-menu__link(href='/akcii') Акции
+						a.main-menu__link.js-menu-link(href='/akcii')
+							span.js-menu-text Акции
 					li.main-menu__item
-						a.main-menu__link(href='/rasprodazha') Распродажа
+						a.main-menu__link.js-menu-link(href='/rasprodazha')
+							span.js-menu-text Распродажа
 					li.main-menu__item
-						a.main-menu__link(href='/blog') Блог
+						a.main-menu__link.js-menu-link(href='/blog')
+							span.js-menu-text Блог
 
 			form.form-search(action='/search' accept-charset='UTF-8' method='get')
 				input(name='q' placeholder='Поиск товаров' type='text')
 				button(type='submit')
 					+svg('ic-search','ic-search', '20', '20')
+
+	.mobile-menu.js-mobile-menu.d-lg-none
+		.mobile-menu__head
+			.mobile-menu__title.js-menu-back Меню
+			span.ic-hamburger.active.js-close-menu
+				span
+		.mobile-menu__content-wrap.js-mobile-menu-content-wrap
+			.mobile-menu__content.js-mobile-menu-content
+

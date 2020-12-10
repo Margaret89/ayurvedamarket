@@ -74,11 +74,6 @@ if($('.js-club-slider').length){
 		$('.js-club-slider-play').addClass('active');
 		$('.js-club-slider').slick('slickPause');
 	});
-	
-	// $('.play').on('click', function() {
-	// 	$('.slider')
-	// 		.slick('slickPlay')
-	// */});
 }
 
 // Свернуть/развернуть текст каталога
@@ -103,3 +98,73 @@ if($('.js-review-list').length){
 		$parent.find('.js-review-full').slideToggle(300);
 	});
 }
+
+// Создание мобильного меню
+var arrMobileMenu = [];
+$('.js-add-mm').each(function(){
+	var indexItem = $(this).attr('data-order');
+	arrMobileMenu[indexItem] = $(this);
+});
+
+for (var i = 0; i < arrMobileMenu.length; i++) {
+	$(arrMobileMenu[i]).clone().appendTo('.js-mobile-menu-content');
+}
+
+// Открыть/Закрыть мобильное меню
+// $('.js-open-menu').click(function(){
+// 	$('.js-shadow').addClass('is-visible');
+// 	$('.js-mobile-menu').addClass('open');
+// 	$('.js-body').addClass('no-scroll');
+// });
+
+// $('.js-close-menu').click(function(){
+// 	 closeCatMenu();
+// });
+
+// $('.js-shadow').click(function(){
+// 	closeCatMenu();
+// });
+
+// function closeCatMenu() {
+// 	$('.js-shadow').removeClass('is-visible');
+// 	$('.js-mobile-menu').removeClass('open');
+// 	$('.js-body').removeClass('no-scroll');
+// }
+
+
+// Перемещение мобильного меню
+var indentMenu = 0;
+var levelMenu = 0;
+var titleMobileMenu = $('.js-menu-back').text();
+
+$('.js-menu-arr').on("click", function(event){
+	event.preventDefault();
+	var $curItem = $(this).parent('.js-menu-link');
+	var curItemText = $(this).siblings('.js-menu-text').text();
+	var $subMenu = $curItem.siblings('.js-menu-sub');
+	indentMenu = indentMenu - 100;
+	levelMenu++;
+
+	$('.js-mobile-menu-content-wrap').scrollTop(0);
+	$subMenu.addClass('active');
+	$('.js-menu-back').addClass('active');
+	$('.js-menu-back').text(curItemText);
+
+	$('.js-mobile-menu-content').css('transform','translateX('+indentMenu+'%)');
+});
+
+$('.js-menu-back').on("click", function(event){
+	if ($(this).hasClass('active')) {
+		indentMenu = indentMenu + 100;
+		levelMenu--;
+
+		if (levelMenu == 0) {
+			$('.js-menu-back').text(titleMobileMenu);
+			$('.js-menu-back').removeClass('active');
+		}
+
+		$('.js-menu-sub').removeClass('active');
+
+		$('.js-mobile-menu-content').css('transform','translateX('+indentMenu+'%)');
+	}
+});

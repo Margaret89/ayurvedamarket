@@ -263,3 +263,40 @@ button.btn-shadow:hover{
 	&.visible{opacity: 1;}
 	&:hover .icon{fill: $color-orange;}
 }
+
+.d-none{display: none!important;}
+
+@media (min-width: 1101px) {
+	.d-lg-inline{display: inline!important;}
+	.d-lg-inline-block{display: inline-block!important;}
+	.d-lg-block{display: block!important;}
+	.d-lg-inline-flex{display: inline-flex!important;}
+	.d-lg-flex{display: flex!important;}
+	.d-lg-none{display: none!important;}
+}
+
+@media (min-width: 768px) {
+	.d-md-inline{display: inline!important;}
+	.d-md-inline-block{display: inline-block!important;}
+	.d-md-block{display: block!important;}
+	.d-md-inline-flex{display: inline-flex!important;}
+	.d-md-flex{display: flex!important;}
+	.d-md-none{display: none!important;}
+}
+
+@media (max-width: 1100px) {
+	.st-container{width: 750px;}
+
+	.move-up{
+		height: 50px;
+		top: auto;
+		bottom: 20px;
+		left: auto;
+		right: 20px;
+		background: $color-orange;
+
+		.icon{fill: #fff;}
+		&:hover{background: $color-dark-orange;}
+		&:hover .icon{fill: #fff;}
+	}
+}
