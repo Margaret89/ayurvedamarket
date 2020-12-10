@@ -152,3 +152,32 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.blog-wrap{
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&__top{
+			display: block;
+
+			.pagination{margin-top: 20px;}
+		}
+
+		.pagination{margin-right: 0;}
+	}
+
+	.blog-list{
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+
+		&__item{
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__img{background-size: contain;}
+	}
+}
