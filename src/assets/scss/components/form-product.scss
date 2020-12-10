@@ -61,3 +61,27 @@
 		line-height: rem(21px);
 	}
 }
+
+@media (max-width: 1100px) {
+	.form-product{
+		&__title{font-size: rem(12px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-product{
+		display: block;
+		padding: 5px 15px;
+
+		&__head{
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.form-product{
+		input[type="text"]{width: 220px;}
+	}
+}

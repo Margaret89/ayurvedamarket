@@ -59,3 +59,35 @@
 		line-height: rem(21px);
 	}
 }
+
+@media (max-width: 767px) {
+	.form-subscribe{
+		display: block;
+		padding: 5px 15px;
+
+		&__head{
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+
+		&__content{flex-wrap: wrap;}
+		&__label{white-space: nowrap;}
+
+		&__field,
+		.btn,
+		input[type="submit"].btn,
+		button.btn{
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.form-subscribe{
+		&__content{
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}

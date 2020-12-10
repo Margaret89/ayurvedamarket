@@ -56,3 +56,10 @@
 	.gallery img{margin: 0;}
 	.contacts img{margin: 0;}
 }
+
+@media (max-width: 767px) {
+	.page-wrap{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

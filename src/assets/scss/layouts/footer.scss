@@ -73,3 +73,51 @@
 
 	&__item:not(:last-child){margin-right: 20px;}
 }
+
+@media (max-width: 1100px) {
+	.footer-main{
+		&__item{
+			width: 50%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-main{
+		padding: 30px 5px;
+
+		&__title{font-size: rem(24px);}
+
+		&__item,
+		&__link{
+			font-size: rem(16px);
+		}
+	}
+
+	.footer-bottom{
+		align-items: center;
+		justify-content: space-between;
+
+		&__polit{
+			position: static;
+			margin: 0 15px 0 0;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.footer-main{
+		&__item{width: 100%;}
+	}
+
+	.footer-bottom{
+		flex-direction: column;
+		padding: 20px 0;
+
+		&__polit{
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+	}
+}

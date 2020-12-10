@@ -7,7 +7,7 @@ header.header
 			img(src="/assets/img/sticker-right.png", alt="")
 
 	.header-top
-		.ic-hamburger.js-ic-hamburger.d-lg-none
+		.ic-hamburger.js-open-menu.d-lg-none
 			span
 
 		nav.top-menu.js-add-mm(data-order="1")
@@ -38,6 +38,7 @@ header.header
 					a(href="/about_us/19363").top-menu__link.js-menu-link Контакты
 
 		a(href="/cabinet").header-top__profile Ваш кабинет
+			+svg('ic-user','ic-user', '20', '20')
 
 		a(href="/showcart").header-basket
 			span.header-basket__icon

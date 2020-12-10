@@ -111,25 +111,25 @@ for (var i = 0; i < arrMobileMenu.length; i++) {
 }
 
 // Открыть/Закрыть мобильное меню
-// $('.js-open-menu').click(function(){
-// 	$('.js-shadow').addClass('is-visible');
-// 	$('.js-mobile-menu').addClass('open');
-// 	$('.js-body').addClass('no-scroll');
-// });
+$('.js-open-menu').on('click', function(){
+	$('.js-shadow').addClass('is-visible');
+	$('.js-mobile-menu').addClass('open');
+	$('.js-body').addClass('no-scroll');
+});
 
-// $('.js-close-menu').click(function(){
-// 	 closeCatMenu();
-// });
+$('.js-close-menu').click(function(){
+	 closeCatMenu();
+});
 
-// $('.js-shadow').click(function(){
-// 	closeCatMenu();
-// });
+$('.js-shadow').on('click', function(){
+	closeCatMenu();
+});
 
-// function closeCatMenu() {
-// 	$('.js-shadow').removeClass('is-visible');
-// 	$('.js-mobile-menu').removeClass('open');
-// 	$('.js-body').removeClass('no-scroll');
-// }
+function closeCatMenu() {
+	$('.js-shadow').removeClass('is-visible');
+	$('.js-mobile-menu').removeClass('open');
+	$('.js-body').removeClass('no-scroll');
+}
 
 
 // Перемещение мобильного меню
