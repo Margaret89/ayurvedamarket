@@ -62,4 +62,17 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+
+	.page{
+		&__slogan{margin-top: 0;}
+
+		&__header{
+			height: 250px;
+			padding: 15px;
+
+			h1, .h1{font-size: rem(42px);}
+		}
+	}
+
+	.map > ymaps{height: 300px!important;}
 }
