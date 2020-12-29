@@ -27,13 +27,13 @@ block content
 					each item in list
 						.contacts__item
 							.contacts__icon
-								img(src="/assets/img/"+item.img, alt="")
+								img(src="assets/img/"+item.img, alt="")
 							.contacts__text= item.text
 
 
 				.h2 Адрес
 				p(style='font-size: 1.125rem')
-					img(src="/assets/img/Moscow_Metro.png", alt="", style="display: inline-block; width: 20px; margin: 0 0 2px 0;")
+					img(src="assets/img/Moscow_Metro.png", alt="", style="display: inline-block; width: 20px; margin: 0 0 2px 0;")
 					| «Электрозаводская», Барабанный переулок, д.&nbsp;4/4, оранжевый офисный центр «На Барабанном» - вход&nbsp;5, этаж&nbsp;2 шоурум Аюрведамаркет. 
 				
 				.h2 Режим работы
@@ -111,7 +111,7 @@ block content
 
 						each item in list
 							.article__item
-								a.article__img(style="background-image: url(/assets/img/"+item.img+")", href=item.link)
+								a.article__img(style="background-image: url(assets/img/"+item.img+")", href=item.link)
 
 								.article__content
 									.article__title

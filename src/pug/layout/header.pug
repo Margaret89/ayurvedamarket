@@ -1,12 +1,16 @@
 header.header
 	.header-sticker
 		a.header-sticker__left(href="https://ayurvedamarket.ru/presents")
-			img(src="/assets/img/sticker-left.png", alt="")
+			img(src="assets/img/sticker-left.png", alt="")
 
 		a.header-sticker__right(href="https://ayurvedamarket.ru/top_au")
-			img(src="/assets/img/sticker-right.png", alt="")
+			img(src="assets/img/sticker-right.png", alt="")
 
 	.header-top
+		.header-top__home
+			a(href="/")
+				+svg('ic-home','ic-home', '30', '30')
+
 		.ic-hamburger.js-open-menu.d-lg-none
 			span
 
@@ -56,7 +60,7 @@ header.header
 
 			.header-main__slogan Крупнейший магазин Аюрведы
 				.header-main__sticker
-					img(src="/assets/img/sticker-year.svg", alt="")
+					img(src="assets/img/sticker-year.svg", alt="")
 
 			.yandex-market-label
 				a(href='https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=73582/path=dynamic.88x31/*https://market.yandex.ru/shop--aiurveda-market/6941/reviews')

@@ -140,7 +140,7 @@
 		justify-content: center;
 		width: 70px;
 		height: 68px;
-		background: url(/assets/img/bg-sale.png) no-repeat center;
+		background: url(../img/bg-sale.png) no-repeat center;
 		background-size: contain;
 		@include font(normal, bold, rem(20px), 1.2, #fff);
 		position: absolute;
@@ -148,7 +148,7 @@
 		right: -15px;
 	}
 	
-	&__sale_light-blue{background-image: url(/assets/img/bg-sale-light-blue.png);}
+	&__sale_light-blue{background-image: url(../img/bg-sale-light-blue.png);}
 
 	&__text{
 		font-family: Arial;
@@ -312,7 +312,7 @@
 		width: 52px;
 		height: 100px;
 		background-color: transparent;
-		background-image: url(/assets/img/blog-arrows.png);
+		background-image: url(../img/blog-arrows.png);
 		background-repeat: no-repeat;
 		font-size: 0;
 		position: absolute;

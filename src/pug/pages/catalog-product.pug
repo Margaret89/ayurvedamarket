@@ -86,11 +86,11 @@ block content
 			.product
 				.product-main
 					.product-main__photo
-						a(href='/assets/img/product.jpg' data-fancybox='product')
-							img(src="/assets/img/product.jpg", alt="")
+						a(href='assets/img/product.jpg' data-fancybox='product')
+							img(src="assets/img/product.jpg", alt="")
 
 						.product-main__sticker
-							img(src="/assets/img/sticker-sale.png", alt="")
+							img(src="assets/img/sticker-sale.png", alt="")
 
 						.product-main__sale -50%
 						<!--.product-main__sale.product-main__sale_light-blue -15%-->
@@ -153,7 +153,7 @@ block content
 						.product-desc
 							.product-desc__item
 								.product-desc__img
-									img(src="/assets/img/uzor_100_100.jpg", alt="")
+									img(src="assets/img/uzor_100_100.jpg", alt="")
 
 								.product-desc__text Общее действие: регулирует гормональные функции у женщин; восстанавливает гормональный баланс во время грудного вскармливания, месячных и менопаузы; укрепляет ткани плода во время беременности; увеличивает способность яйцеклетки к оплодотворению; действует как мочегонное средство; снимает отечность; очищает кишечных; улучшает аппетит; нормализует процессы переваривания и усвоения пищи; устраняет симптомы гастрита и изжоги; нормализует месячный цикл у женщин; повышает фертильность; успокаивает нервную систему и психику; замедляет процессы старения; оздоровляет печень; улучшает цвет лица; обладает свойствами антидепрессанта и транквилизатора; улучшает перистальтику и устраняет запоры; питает и укрепляет половые органы у женщин.
 
@@ -202,28 +202,28 @@ block content
 								.catalog-list__item
 									.catalog-list__content
 										a.catalog-list__img(href=item.link)
-											img(src="/assets/img/"+item.img, alt="")
+											img(src="assets/img/"+item.img, alt="")
 
 											if(item.like || item.sale || item.spec || item.top || item.hit || item.hit_season ||item.new_collection ||item.new || item.new_compl)
 												span.catalog-list__sticker
 													if(item.like)
-														img(src="/assets/img/sticker-like.png", alt="")
+														img(src="assets/img/sticker-like.png", alt="")
 													if(item.sale)
-														img(src="/assets/img/sticker-sale.png", alt="")
+														img(src="assets/img/sticker-sale.png", alt="")
 													if(item.spec)
-														img(src="/assets/img/sticker-spec.png", alt="")
+														img(src="assets/img/sticker-spec.png", alt="")
 													if(item.top)
-														img(src="/assets/img/sticker-top.png", alt="")
+														img(src="assets/img/sticker-top.png", alt="")
 													if(item.hit)
-														img(src="/assets/img/sticker-hit.png", alt="")
+														img(src="assets/img/sticker-hit.png", alt="")
 													if(item.new_collection)
-														img(src="/assets/img/sticker-new-collection.png", alt="")
+														img(src="assets/img/sticker-new-collection.png", alt="")
 													if(item.new)
-														img(src="/assets/img/sticker-new.png", alt="")
+														img(src="assets/img/sticker-new.png", alt="")
 													if(item.hit_season)
-														img(src="/assets/img/sticker-hit-season.png", alt="")
+														img(src="assets/img/sticker-hit-season.png", alt="")
 													if(item.new_compl)
-														img(src="/assets/img/sticker-new-compl.png", alt="")
+														img(src="assets/img/sticker-new-compl.png", alt="")
 
 											if(item.sale)
 												span.catalog-list__sale= item.sale
@@ -263,7 +263,7 @@ block content
 							each item in list
 								.product-other__item
 									a(href="#").product-other__img
-										img(src="/assets/img/"+item.img, alt="")
+										img(src="assets/img/"+item.img, alt="")
 
 									a(href="#").product-other__text=item.text
 
@@ -311,7 +311,7 @@ block content
 							.form-review__bottom
 								.form-review-captcha
 									.form-review-captcha__img
-										img(src="/assets/img/captcha.png", alt="")
+										img(src="assets/img/captcha.png", alt="")
 
 									input(type="text")
 
@@ -340,5 +340,5 @@ block content
 			each item in list
 				.slider-product__item
 					a(href=item.link).slider-product__link
-						.slider-product__img(style="background-image: url(/assets/img/"+item.img+")")
+						.slider-product__img(style="background-image: url(assets/img/"+item.img+")")
 						.slider-product__text= item.text

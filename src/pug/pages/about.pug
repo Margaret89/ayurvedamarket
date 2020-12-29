@@ -9,7 +9,7 @@ block content
 			.page
 				.page__slogan Об Аюрведамаркет, наших проектах и о том, что обычно остаётся за кадром.
 
-				.page__header.page__header_right.page__header_bown(style="background-image: url(/assets/img/about.jpg)")
+				.page__header.page__header_right.page__header_bown(style="background-image: url(assets/img/about.jpg)")
 					h1 О нас
 					.page__subtitle Письмо руководителя
 
@@ -19,7 +19,7 @@ block content
 				.quote-author
 					.quote-author__text Меня зовут Станислав Ларин, треть моей жизни посвящена Ayurvedamarket — проекту, который в 2003 году мы создали с друзьями-единомышленниками. 
 					.quote-author__img
-						img(src="/assets/img/round-photo2.jpg", alt="")
+						img(src="assets/img/round-photo2.jpg", alt="")
 
 				p
 					b Дело в том, что Ayurvedamarket не совсем обычный магазин. С первого дня больше половины нашей деятельности связано с популяризацией Аюрведы в России. 
@@ -43,8 +43,8 @@ block content
 						
 						each item in list
 							.gallery__item
-								a(href="/assets/img/"+item data-fancybox='images')
-									img(src="/assets/img/"+item, alt="")
+								a(href="assets/img/"+item data-fancybox='images')
+									img(src="assets/img/"+item, alt="")
 
 					.gallery__label Аюрведическая конференция 2015
 
@@ -79,7 +79,7 @@ block content
 
 						each item in list
 							.article__item
-								a.article__img(style="background-image: url(/assets/img/"+item.img+")", href=item.link)
+								a.article__img(style="background-image: url(assets/img/"+item.img+")", href=item.link)
 
 								.article__content
 									.article__title

@@ -6,7 +6,7 @@
 .club-form{
 	&__main{
 		padding: 20px;
-		background: url(/assets/img/bg-club-form.jpg) no-repeat center;
+		background: url(../img/bg-club-form.jpg) no-repeat center;
 		background-size: cover;
 	}
 
@@ -106,18 +106,18 @@
 		display: inline-block;
 		width: 38px;
 		height: 100%;
-		background: url(/assets/img/pattern-blue.jpg) no-repeat 0 0;
+		background: url(../img/pattern-blue.jpg) no-repeat 0 0;
 		background-size: cover;
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 
-	&__item_green::before{background-image: url(/assets/img/pattern-green.jpg);}
-	&__item_yellow::before{background-image: url(/assets/img/pattern-yellow.jpg);}
-	&__item_red::before{background-image: url(/assets/img/pattern-red.jpg);}
-	&__item_purple::before{background-image: url(/assets/img/pattern-purple.jpg);}
-	&__item_pink::before{background-image: url(/assets/img/pattern-pink.jpg);}
+	&__item_green::before{background-image: url(../img/pattern-green.jpg);}
+	&__item_yellow::before{background-image: url(../img/pattern-yellow.jpg);}
+	&__item_red::before{background-image: url(../img/pattern-red.jpg);}
+	&__item_purple::before{background-image: url(../img/pattern-purple.jpg);}
+	&__item_pink::before{background-image: url(../img/pattern-pink.jpg);}
 
 	&__title{
 		display: inline-block;
