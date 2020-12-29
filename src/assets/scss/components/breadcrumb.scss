@@ -28,5 +28,10 @@
 	.breadcrumb{
 		padding-left: 15px;
 		padding-right: 15px;
+
+		&__link,
+		&__item:not(:last-child)::after{
+			color: $color-text;
+		}
 	}
 }

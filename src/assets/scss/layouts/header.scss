@@ -574,6 +574,13 @@
 			top: 35px;
 			right: 0;
 		}
+
+		&_mob-short{background: none;}
+		
+		&_mob-short .header-contacts,
+		&_mob-short .yandex-market-label{
+			display: none;
+		}
 	}
 
 	.header-contacts{
