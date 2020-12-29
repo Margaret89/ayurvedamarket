@@ -7,12 +7,15 @@ header.header
 			img(src="assets/img/sticker-right.png", alt="")
 
 	.header-top
-		.header-top__home
-			a(href="/")
-				+svg('ic-home','ic-home', '30', '30')
+		a(href="/").header-top__home.d-md-none
+			+svg('ic-home','ic-home', '24', '24')
 
-		.ic-hamburger.js-open-menu.d-lg-none
-			span
+		.header-top__menu
+			.ic-hamburger.js-open-menu.d-lg-none
+				span
+
+		a(href="#").header-top__search.d-md-none
+			+svg('ic-search','ic-search', '20', '20')
 
 		nav.top-menu.js-add-mm(data-order="1")
 			ul.top-menu__list

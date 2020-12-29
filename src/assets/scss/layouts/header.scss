@@ -361,7 +361,7 @@
 		height: 100%;
 		width: 80vw;
 		background: #fff;
-		z-index: 100;
+		z-index: 1000;
 		overflow-y: auto;
 		overflow-x: hidden;
 		transition: left 0.3s ease;
@@ -483,18 +483,65 @@
 		&__sum{
 			display: none;
 		}
+
+		&__icon .icon.ic-stroke{stroke: #696969;}
 	}
 
 	.header-top{
-		&__profile{
-			font-size: 0;
-			padding: 0 15px;
+		justify-content: space-between;
+		width: 100%;
+		height: 40px;
+		min-height: 0;
+		padding-left: 0;
+		border-width: 1px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 998;
 
-			.icon{
-				display: inline-block;
-				fill: #565656;
+		.ic-hamburger{
+			position: relative;
+			transform: none;
+			top: auto;
+			left: auto;
+		}
+
+		&__profile,
+		&__search,
+		&__home,
+		&__menu{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 15px;
+			transition: all 0.2s ease 0s;
+
+			.icon{fill: #696969;}
+		}
+
+		&__menu{
+			.ic-hamburger:hover{
+				span,
+				span::after,
+				span::before{background: #888;}
 			}
 		}
+
+		&__search .icon{fill: #5c5c5c;}
+
+		&__search:hover,
+		&__home:hover,
+		&__menu:hover{
+			background: #e9e9e9;
+		}
+
+		&__profile{
+			font-size: 0;
+			
+			.icon{display: inline-block;}
+		}
+
+		&__profile::after{display: none;}
 	}
 
 	.header-main{
@@ -502,17 +549,45 @@
 		height: auto;
 		background-position: 125% 100%;
 
-		&__info{padding: 15px 0;}
-		&__logo{width: 280px;}
-		&__slogan{font-size: rem(28px);}
+		&__info{
+			max-width: 100%;
+			padding: 10px 0;
+		}
+
+		.yandex-market-label{
+			position: absolute;
+			top: 88px;
+			right: 10px;
+			margin: 0;
+		}
+
+		&__slogan{display: none;}
+
+		&__logo{
+			display: block;
+			width: 250px;
+			margin: 0 auto;
+		}
 
 		&__sticker{
+			display: none;
 			top: 35px;
 			right: 0;
 		}
 	}
 
-	.header-contacts{text-align: left;}
+	.header-contacts{
+		text-align: left;
+		padding-left: 0;
+		padding-right: 0;
+
+		&__item{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&__phone{font-size: rem(20px);}
+	}
 
 	.header-nav{
 		&__bottom .form-search{margin: 0 15px;}
