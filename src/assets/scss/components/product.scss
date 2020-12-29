@@ -17,6 +17,11 @@
 		position: relative;
 
 		img{max-height: 100%;}
+
+		a{
+			display: block;
+			height: 100%;
+		}
 	}
 
 	&__sticker{
@@ -396,8 +401,10 @@
 		&__content{
 			width: 100%;
 			min-height: 0;
-			margin-top: 30px;
+			margin-top: 10px;
+			padding-top: 20px;
 			padding-right: 0;
+			border-top: 1px solid #ddd;
 		}
 	}
 
@@ -428,52 +435,66 @@
 
 	.product-main{
 		&__photo{
+			display: table;
 			width: 290px;
 			height: 290px;
+			margin: 0 auto;
 		}
 
 		&__bottom{padding: 0;}
 	}
 
 	.product-param{
-		flex-direction: column;
-
 		&__item,
 		&__title{
-			display: block;
-			width: 100%;
-			border-right: 0;
-			text-align: left;
-			padding-left: 0;
-			padding-right: 0;
+			font-size: rem(12px);
 		}
 
-		&__item{margin-bottom: 10px;}
+		&__title,
+		&__item{
+			width: 30%;
+		}
 
-		&__title:nth-child(1){order: 1;}
-		&__title:nth-child(2){order: 3;}
-		&__title:nth-child(3){order: 5;}
-		&__item:nth-child(4){order: 2;}
-		&__item:nth-child(5){order: 4;}
-		&__item:nth-child(6){order: 6;}
+		&__title:nth-child(1),
+		&__item:nth-child(4){
+			width: 40%;
+		}
+
+	// 	flex-direction: column;
+
+	// 	&__item,
+	// 	&__title{
+	// 		display: block;
+	// 		width: 100%;
+	// 		border-right: 0;
+	// 		text-align: left;
+	// 		padding-left: 0;
+	// 		padding-right: 0;
+	// 	}
+
+	// 	&__item{margin-bottom: 10px;}
+
+	// 	&__title:nth-child(1){order: 1;}
+	// 	&__title:nth-child(2){order: 3;}
+	// 	&__title:nth-child(3){order: 5;}
+	// 	&__item:nth-child(4){order: 2;}
+	// 	&__item:nth-child(5){order: 4;}
+	// 	&__item:nth-child(6){order: 6;}
 	}
 
 	.product-buy{
-		&__btn,
-		&__arr{
-			display: block;
-		}
+		padding: 0;
+		border: 0;
 
-		&__arr{
-			margin: 10px 0;
-			transform: rotate(90deg);
-		}
+		&__btn{display: block;}
+		&__arr{display: none;}
 
 		&__count,
-		&__arr,
 		&__btn .btn{
 			width: 220px;
 		}
+
+		&__count{margin-bottom: 10px;}
 	}
 
 	.product-desc{
@@ -486,7 +507,14 @@
 	}
 
 	.product-sect{
+		&__title{font-size: rem(18px);}
+		
 		&__content{
+			.cat-list-mob-slider{
+				margin-left: -5px;
+				margin-right: -5px;
+			}
+
 			.catalog-list{
 				margin-left: 0;
 				margin-right: 0;

@@ -5,6 +5,23 @@ block variables
 	- var header_short = 'true';
 
 block content
+	section.section-slider.js-section-slider.d-md-none
+		-
+			var list=[
+				{icon:'sect-slide-grey1.png', icon_color:'sect-slide1.png', text:'Питание'},
+				{icon:'sect-slide-grey2.png', icon_color:'sect-slide2.png', text:'Здоровье'},
+				{icon:'sect-slide-grey3.png', icon_color:'sect-slide3.png', text:'Косметика'},
+				{icon:'sect-slide-grey4.png', icon_color:'sect-slide4.png', text:'Новинки'},
+			]
+
+		each item in list
+			a(href="#").section-slider__item
+				.section-slider__icon
+					img.section-slider__icon-def(src="assets/img/"+item.icon, alt="")
+					img.section-slider__icon-active(src="assets/img/"+item.icon_color, alt="")
+
+				.section-slider__text= item.text
+
 	section.layout
 		.layout__left
 			.layout-header Разделы
@@ -75,14 +92,18 @@ block content
 									sup.catalog-menu__new new!
 
 		.layout__content
-			-
-				var breadcrumbs=[
-					{href:'/',name:'Главная'},
-					{href:'#',name:'Питание'},
-					{href:'#',name:'Полезные перекусы'},
-				];
+			.layout__breadcrumb
+				a(href="#").layout__back.d-md-none
+					+svg('ic-arrow-left','ic-arrow-left', '12', '17')
 
-			+breadcrumbs(breadcrumbs)
+				-
+					var breadcrumbs=[
+						{href:'/',name:'Главная'},
+						{href:'#',name:'Питание'},
+						{href:'#',name:'Полезные перекусы'},
+					];
+
+				+breadcrumbs(breadcrumbs)
 
 			.product
 				.product-main
@@ -113,7 +134,7 @@ block content
 								.product-param__item Индия
 								.product-param__item 200 г
 
-							.share
+							.share.d-none.d-md-inline-flex
 								a(href="#", rel='nofollow').share__item.share__item_vk
 								a(href="#", rel='nofollow').share__item.share__item_fb
 								a(href="#", rel='nofollow').share__item.share__item_tw
@@ -191,64 +212,65 @@ block content
 					.product-sect__title С этим товаром покупают
 
 					.product-sect__content
-						.catalog-list
-							-
-								var list=[
-									{link:'/Bharat_Bazar/6149505/', img:'6149505.jpg', text:'Маш зелёный дроблёный (Moong Chilka) 500 г, Bharat Bazaar', price:'335', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
-									{link:'/Bharat_Bazar/6149520/', img:'6149520.jpg', text:'Маш зелёный (Moong Whole) 500 г, Bharat Bazaar', price:'295', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
-									{link:'/zdoroveda/6210323/', img:'6210323.jpg', text:'Суп турецкий с булгуром и красной чечевицей 250 г, "Здороведа"', price:'180', desc:'Ароматный и яркий по вкусу суп из национальной кухни Турции порадует всех любителей восточных блюд. 100% натуральный состав.'},
-								]
+						.cat-list-mob-slider
+							.catalog-list.js-cat-slider-mob
+									-
+										var list=[
+											{link:'/Bharat_Bazar/6149505/', img:'6149505.jpg', text:'Маш зелёный дроблёный (Moong Chilka) 500 г, Bharat Bazaar', price:'335', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
+											{link:'/Bharat_Bazar/6149520/', img:'6149520.jpg', text:'Маш зелёный (Moong Whole) 500 г, Bharat Bazaar', price:'295', desc:'Используется для приготовления различных блюд восточной кухни, супов, сочетается с рисом, овощами и зеленью.'},
+											{link:'/zdoroveda/6210323/', img:'6210323.jpg', text:'Суп турецкий с булгуром и красной чечевицей 250 г, "Здороведа"', price:'180', desc:'Ароматный и яркий по вкусу суп из национальной кухни Турции порадует всех любителей восточных блюд. 100% натуральный состав.'},
+										]
 
-							each item in list
-								.catalog-list__item
-									.catalog-list__content
-										a.catalog-list__img(href=item.link)
-											img(src="assets/img/"+item.img, alt="")
+									each item in list
+										.catalog-list__item
+											.catalog-list__content
+												a.catalog-list__img(href=item.link)
+													img(src="assets/img/"+item.img, alt="")
 
-											if(item.like || item.sale || item.spec || item.top || item.hit || item.hit_season ||item.new_collection ||item.new || item.new_compl)
-												span.catalog-list__sticker
-													if(item.like)
-														img(src="assets/img/sticker-like.png", alt="")
+													if(item.like || item.sale || item.spec || item.top || item.hit || item.hit_season ||item.new_collection ||item.new || item.new_compl)
+														span.catalog-list__sticker
+															if(item.like)
+																img(src="assets/img/sticker-like.png", alt="")
+															if(item.sale)
+																img(src="assets/img/sticker-sale.png", alt="")
+															if(item.spec)
+																img(src="assets/img/sticker-spec.png", alt="")
+															if(item.top)
+																img(src="assets/img/sticker-top.png", alt="")
+															if(item.hit)
+																img(src="assets/img/sticker-hit.png", alt="")
+															if(item.new_collection)
+																img(src="assets/img/sticker-new-collection.png", alt="")
+															if(item.new)
+																img(src="assets/img/sticker-new.png", alt="")
+															if(item.hit_season)
+																img(src="assets/img/sticker-hit-season.png", alt="")
+															if(item.new_compl)
+																img(src="assets/img/sticker-new-compl.png", alt="")
+
 													if(item.sale)
-														img(src="assets/img/sticker-sale.png", alt="")
+														span.catalog-list__sale= item.sale
+
 													if(item.spec)
-														img(src="assets/img/sticker-spec.png", alt="")
-													if(item.top)
-														img(src="assets/img/sticker-top.png", alt="")
-													if(item.hit)
-														img(src="assets/img/sticker-hit.png", alt="")
-													if(item.new_collection)
-														img(src="assets/img/sticker-new-collection.png", alt="")
-													if(item.new)
-														img(src="assets/img/sticker-new.png", alt="")
-													if(item.hit_season)
-														img(src="assets/img/sticker-hit-season.png", alt="")
-													if(item.new_compl)
-														img(src="assets/img/sticker-new-compl.png", alt="")
+														span.catalog-list__sale.catalog-list__sale_light-blue= item.spec
 
-											if(item.sale)
-												span.catalog-list__sale= item.sale
-
-											if(item.spec)
-												span.catalog-list__sale.catalog-list__sale_light-blue= item.spec
-
-										.catalog-list__text
-											a(href=item.link)= item.text
+												.catalog-list__text
+													a(href=item.link)= item.text
 
 
-										.catalog-list__desc= item.desc
+												.catalog-list__desc= item.desc
 
-									.catalog-list__bottom
-										.catalog-list__price
-											if(item.old_price)
-												.catalog-list__old-price= item.old_price
-											.catalog-list__cur-price= item.price
-												|-
-												
-										if(item.unavailable)
-											a(href="#").catalog-list__link Сообщить о поступлении
-										else
-											a(href="#").btn.btn_green В корзину
+											.catalog-list__bottom
+												.catalog-list__price
+													if(item.old_price)
+														.catalog-list__old-price= item.old_price
+													.catalog-list__cur-price= item.price
+														|-
+														
+												if(item.unavailable)
+													a(href="#").catalog-list__link Сообщить о поступлении
+												else
+													a(href="#").btn.btn_green В корзину
 
 				.product-sect
 					.product-sect__title Другие виды шатавари
@@ -319,7 +341,7 @@ block content
 
 								button(type="submit").btn Отправить
 
-	section.slider-product-wrap
+	section.slider-product-wrap.d-none.d-md-block
 		.slider-product-wrap__title Распродажа
 
 		.slider-product.js-slider-product

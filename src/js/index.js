@@ -1,5 +1,11 @@
 import {$} from './common';
 
+var $windowWidth = $(window).width();
+
+$(window).on('resize', function(){
+	$windowWidth = $(window).width();
+});
+
 // Стрелка перемещения вверх
 $(window).on('scroll', function(){
 	if($(this).scrollTop()>300){
@@ -54,6 +60,31 @@ if($('.js-cat-list-slider').length){
 		prevArrow: '<button type="button" class="slick-prev"><svg class="icon ic-arrow-left" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button type="button" class="slick-next"><svg class="icon ic-arrow-right" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>'
 	});
+}
+
+// Слайдер списка товаров только на мобильном разрешении
+if($('.js-cat-slider-mob').length){
+	newsSlider();
+
+	$(window).on('resize', function(){
+		newsSlider();
+	});
+
+	function newsSlider(){
+		if ($windowWidth < 768) {
+			$('.js-cat-slider-mob:not(.slick-initialized)').slick({
+				infinite: true,
+				dots: false,
+				arrows: true,
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				prevArrow: '<button type="button" class="slick-prev"><svg class="icon ic-arrow-left" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+				nextArrow: '<button type="button" class="slick-next"><svg class="icon ic-arrow-right" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>'
+			});
+		} else {
+			$(".js-cat-slider-mob.slick-initialized").slick("unslick");
+		}
+	}
 }
 
 // Слайдер брендов
