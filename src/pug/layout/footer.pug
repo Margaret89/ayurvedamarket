@@ -15,6 +15,20 @@ footer.footer
 			button.btn(type='submit') Подписаться
 
 	.footer-main
+		.social
+			-
+				var list=[
+					{icon:'ic-vk', width:'20', height:'12'},
+					{icon:'ic-facebook', width:'10', height:'20'},
+					{icon:'ic-instagram', width:'20', height:'20'},
+					{icon:'ic-youtube', width:'17', height:'20'},
+				]
+
+			each item in list
+				a(href="#").social__item
+					+svg(item.icon, item.icon, item.width, item.height)
+
+
 		.footer-main__item
 			.footer-main__title Популярное
 

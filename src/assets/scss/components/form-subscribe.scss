@@ -63,15 +63,31 @@
 @media (max-width: 767px) {
 	.form-subscribe{
 		display: block;
-		padding: 5px 15px;
+		padding: 10px 15px;
+		text-align: center;
+		border-bottom: 0;
 
 		&__head{
+			color: $color-text;
 			margin-right: 0;
 			margin-bottom: 5px;
 		}
 
-		&__content{flex-wrap: wrap;}
-		&__label{white-space: nowrap;}
+		&__content{display: block;}
+
+		&__label{
+			min-width: 100px;
+			white-space: nowrap;
+			color: $color-text;
+			text-align: right;
+		}
+
+		&__field{
+			display: flex;
+			justify-content: center;
+			margin-left: 0;
+			margin-right: 0;
+		}
 
 		&__field,
 		.btn,
