@@ -1,0 +1,83 @@
+/*-------------- section-slider -----------------*/
+.section-slider{
+	display: none;
+	padding: 10px 40px;
+	background: #f5f5f5;
+
+	&.slick-initialized{display: block;}
+
+	&__item{
+		padding: 0 10px;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	&__icon{
+		height: 40px;
+
+		img{
+			display: inline-block;
+			vertical-align: top;
+			max-height: 100%;
+		}
+	}
+
+	&__icon &__icon-active{display: none;}
+
+	&__text{
+		margin-top: 5px;
+		@include font(normal, normal, rem(14px), 1.2, $color-text);
+		text-transform: uppercase;
+	}
+
+	.slick-arrow{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: #fff;
+		box-shadow: none;
+		border: 0;
+		outline: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+		transition: all 0.2s ease 0s;
+		position: absolute;
+		@include top-center;
+		z-index: 10;
+		cursor: pointer;
+
+		.icon{
+			width: 12px;
+			height: 17px;
+			fill: $color-text;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	.slick-arrow:hover{
+		background: $color-orange;
+		.icon{fill: #fff;}
+	}
+
+	.slick-prev{left: 5px;}
+	.slick-next{right: 5px;}
+}
+
+@media (max-width: 767px) {
+	.section-slider{
+		padding-left: 35px;
+		padding-right: 35px;
+
+		&__item{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		&__text{font-size: rem(12px);}
+	}
+}

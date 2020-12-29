@@ -1,0 +1,72 @@
+/*-------------- brand-slider -----------------*/
+.brand-slider-wrap{
+	.h3, h3{
+		color: $color-text;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 20px;
+		padding: 0 15px;
+	}
+}
+
+.brand-slider{
+	padding: 0 27px;
+	display: none;
+
+	&.slick-initialized{display: block;}
+
+	&__sect{
+		display: flex!important;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	
+	&__item{
+		width: 50%;
+		padding: 8px;
+		text-align: center;
+
+		img{
+			display: inline-block;
+			vertical-align: top;
+			max-width: 120px;
+		}
+	}
+
+	.slick-arrow{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: #fff;
+		box-shadow: none;
+		border: 0;
+		outline: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+		transition: all 0.2s ease 0s;
+		position: absolute;
+		@include top-center;
+		z-index: 10;
+		cursor: pointer;
+
+		.icon{
+			width: 12px;
+			height: 17px;
+			fill: $color-text;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	.slick-arrow:hover{
+		background: $color-orange;
+		.icon{fill: #fff;}
+	}
+
+	.slick-prev{left: 5px;}
+	.slick-next{right: 5px;}
+}

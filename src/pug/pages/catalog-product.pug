@@ -234,15 +234,16 @@ block content
 										.catalog-list__text
 											a(href=item.link)= item.text
 
+
+										.catalog-list__desc= item.desc
+
+									.catalog-list__bottom
 										.catalog-list__price
 											if(item.old_price)
 												.catalog-list__old-price= item.old_price
 											.catalog-list__cur-price= item.price
 												|-
-
-										.catalog-list__desc= item.desc
-
-									.catalog-list__bottom
+												
 										if(item.unavailable)
 											a(href="#").catalog-list__link Сообщить о поступлении
 										else

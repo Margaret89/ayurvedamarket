@@ -116,7 +116,7 @@
 		position: relative;
 	}
 
-	&__bottom{margin-top: 12px;}
+	&__bottom{margin-top: 15px;}
 
 	&__img{
 		display: flex;
@@ -126,6 +126,8 @@
 		height: 190px;
 		position: relative;
 		margin-bottom: 5px;
+
+		img{max-height: 100%;}
 	}
 
 	&__sticker{
@@ -162,7 +164,7 @@
 	}
 
 	&__price{
-		padding-top: 15px;
+		padding-bottom: 12px;
 		font-family: $font-helvetica;
 		@include font(normal, normal, rem(18px), 1.2, #939598);
 	}
@@ -203,12 +205,6 @@
 
 	&__desc::before{border-color: transparent #ddd transparent transparent; right: 100%;}
 	&__desc::after{border-color: transparent #fff transparent transparent; right: calc(100% - 1px);}
-
-	&__img:hover ~ &__desc,
-	&__text:hover ~ &__desc{
-		display: flex;
-		align-items: center;
-	}
 
 	&__link{
 		font-family: Arial;
@@ -277,6 +273,83 @@
 		@include font(normal, normal, rem(26px), 1.2, $color-orange);
 		padding: 0 20px;
 		margin-bottom: 10px;
+	}
+}
+
+.cat-list-slider{
+	margin: 20px 0 30px;
+
+	&:not(:last-child){
+		border-bottom: 1px solid #ddd;
+	}
+
+	.h3, h3{
+		text-align: center;
+		padding: 0 15px;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.catalog-list{
+		display: none;
+		margin: 0 10px;
+
+		&.slick-initialized{display: block;}
+
+		&__item{
+			display: flex!important;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			margin: 0;
+			border: 0;
+			padding: 0 5px 20px;
+		}
+
+		&__img{height: 120px;}
+
+		&__sticker{right: -5px;}
+
+		.slick-track{display: flex;}
+		.slick-slide{height: auto;}
+		.slick-slide > div{height: 100%;}
+
+		.slick-arrow{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: none;
+			border: 0;
+			outline: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+			transition: all 0.2s ease 0s;
+			position: absolute;
+			top: 45px;
+			z-index: 10;
+			cursor: pointer;
+	
+			.icon{
+				width: 12px;
+				height: 17px;
+				fill: $color-text;
+				transition: all 0.2s ease 0s;
+			}
+		}
+	
+		.slick-arrow:hover{
+			background: $color-orange;
+			.icon{fill: #fff;}
+		}
+	
+		.slick-prev{left: -5px;}
+		.slick-next{right: -5px;}
 	}
 }
 
@@ -391,6 +464,17 @@
 			left: calc(100% - 1px);
 		}
 	}
+}
+
+@media (min-width: 768px) {
+	.catalog-list{
+		&__img:hover ~ &__desc,
+		&__text:hover ~ &__desc{
+			display: flex;
+			align-items: center;
+		}
+	}
+
 }
 
 @media (max-width: 767px) {

@@ -18,7 +18,52 @@ if($('.js-top-slider').length){
 		arrows: false,
 		autoplay: true,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					dots: true,
+				}
+			},
+		]
+	});
+}
+
+// Слайдер разделов-иконок
+if($('.js-section-slider').length){
+	$('.js-section-slider').slick({
+		infinite: true,
+		dots: false,
+		arrows: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon ic-arrow-left" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon ic-arrow-right" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>'
+	});
+}
+
+// Слайдер списка товаров
+if($('.js-cat-list-slider').length){
+	$('.js-cat-list-slider').slick({
+		infinite: true,
+		dots: false,
+		arrows: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon ic-arrow-left" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon ic-arrow-right" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>'
+	});
+}
+
+// Слайдер брендов
+if($('.js-brand-slider').length){
+	$('.js-brand-slider').slick({
+		infinite: true,
+		dots: false,
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon ic-arrow-left" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon ic-arrow-right" width="20" height="30"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>'
 	});
 }
 
