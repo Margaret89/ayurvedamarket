@@ -9,7 +9,7 @@
 
 	&__item,
 	&__link{
-		@include font(normal, normal, rem(16px), 1.2, #3f3d1d);
+		@include font(normal, 300, rem(16px), 1.2, #3f3d1d);
 		text-decoration: none;
 	}
 
